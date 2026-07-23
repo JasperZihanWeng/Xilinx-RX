@@ -1,0 +1,475 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Jul 22 12:32:08 2026
+# Process ID: 23108
+# Current directory: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/ten_gig_eth_pcs_pma_0_synth_1
+# Command line: vivado.exe -log ten_gig_eth_pcs_pma_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ten_gig_eth_pcs_pma_0.tcl
+# Log file: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/ten_gig_eth_pcs_pma_0_synth_1/ten_gig_eth_pcs_pma_0.vds
+# Journal file: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/ten_gig_eth_pcs_pma_0_synth_1\vivado.jou
+# Running On: ECE-OP7010PC2, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 34033 MB
+#-----------------------------------------------------------
+source ten_gig_eth_pcs_pma_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 474.789 ; gain = 182.297
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ten_gig_eth_pcs_pma_0
+Command: synth_design -top ten_gig_eth_pcs_pma_0 -part xc7vx690tffg1761-2 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2024.06' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 42016
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1541.773 ; gain = 440.906
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_support' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_support.v:60]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_gt_common' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_gt_common.v:58]
+INFO: [Synth 8-6157] synthesizing module 'GTHE2_COMMON' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:44076]
+INFO: [Synth 8-6155] done synthesizing module 'GTHE2_COMMON' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:44076]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_gt_common' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_gt_common.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_shared_clock_and_reset' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_shared_clock_and_reset.v:58]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:73631]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:73631]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE2' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:73785]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE2' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:73785]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_ff_synchronizer_rst' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_ff_synchronizer_rst' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_ff_synchronizer_rst__parameterized0' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_ff_synchronizer_rst__parameterized0' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_shared_clock_and_reset' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_shared_clock_and_reset.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_block' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_block.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_local_clock_and_reset' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_local_clock_and_reset.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_sim_speedup_controller' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_sim_speedup_controller.v:61]
+INFO: [Synth 8-6157] synthesizing module 'LUT1' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:81293]
+INFO: [Synth 8-6155] done synthesizing module 'LUT1' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:81293]
+INFO: [Synth 8-6157] synthesizing module 'LDCE' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:81006]
+INFO: [Synth 8-6155] done synthesizing module 'LDCE' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:81006]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_sim_speedup_controller' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_sim_speedup_controller.v:61]
+INFO: [Synth 8-6157] synthesizing module 'BUFH' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:2198]
+INFO: [Synth 8-6155] done synthesizing module 'BUFH' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:2198]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_ff_synchronizer_rst__parameterized1' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_ff_synchronizer_rst__parameterized1' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_ff_synchronizer_rst.v:61]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_ff_synchronizer' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_ff_synchronizer.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_ff_synchronizer' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_ff_synchronizer.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_local_clock_and_reset' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_local_clock_and_reset.v:58]
+INFO: [Synth 8-6157] synthesizing module 'MUXCY_L' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:85152]
+INFO: [Synth 8-6155] done synthesizing module 'MUXCY_L' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:85152]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_cable_pull_logic' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_cable_pull_logic.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_cable_pull_logic' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_cable_pull_logic.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_gtwizard_gth_10gbaser_multi_GT' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_gtwizard_gth_10gbaser_multi_gt.v:52]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0_gtwizard_gth_10gbaser_GT' [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_gtwizard_gth_10gbaser_gt.v:55]
+INFO: [Synth 8-6157] synthesizing module 'GTHE2_CHANNEL' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:43242]
+INFO: [Synth 8-6155] done synthesizing module 'GTHE2_CHANNEL' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:43242]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_gtwizard_gth_10gbaser_GT' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_gtwizard_gth_10gbaser_gt.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_gtwizard_gth_10gbaser_multi_GT' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_gtwizard_gth_10gbaser_multi_gt.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_block' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_block.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0_support' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_support.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0' (0#1) [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.v:57]
+WARNING: [Synth 8-7129] Port reset in module ten_gig_eth_pcs_pma_v6_0_26_drp_ipif is either unconnected or has no load
+WARNING: [Synth 8-7129] Port re in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hold in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port backdoor_clear in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[0] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hold in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port backdoor_clear in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[15] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[14] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[13] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[12] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[11] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[10] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[9] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[8] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[7] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[6] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[5] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[4] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[3] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[2] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[1] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[0] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hold in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port backdoor_clear in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[7] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[6] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[5] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[4] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[3] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[2] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[1] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[0] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hold in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port backdoor_clear in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[5] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[4] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[3] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[2] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[1] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[0] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hold in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port backdoor_clear in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[0] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port we in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hold in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port backdoor_clear in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port d[0] in module ten_gig_eth_pcs_pma_v6_0_26_g_register__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port re in module ten_gig_eth_pcs_pma_v6_0_26_g_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hold in module ten_gig_eth_pcs_pma_v6_0_26_g_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port backdoor_we in module ten_gig_eth_pcs_pma_v6_0_26_g_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port backdoor_d[0] in module ten_gig_eth_pcs_pma_v6_0_26_g_register is either unconnected or has no load
+WARNING: [Synth 8-7129] Port areset_clk156 in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[11] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[10] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[9] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[8] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[7] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[6] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[5] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[4] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[3] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[2] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rnw in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[15] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[14] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[13] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[12] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[11] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[10] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[9] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[8] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[7] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[6] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[5] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[4] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[3] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[2] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[1] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wdata[0] in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port cs in module ten_gig_eth_pcs_pma_v6_0_26_common_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port kr_pmd_status_core_i[3] in module ten_gig_eth_pcs_pma_v6_0_26_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port kr_pmd_status_core_i[2] in module ten_gig_eth_pcs_pma_v6_0_26_ieee_registers is either unconnected or has no load
+WARNING: [Synth 8-7129] Port kr_pmd_status_core_i[1] in module ten_gig_eth_pcs_pma_v6_0_26_ieee_registers is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1708.738 ; gain = 607.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1708.738 ; gain = 607.871
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1708.738 ; gain = 607.871
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1708.738 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc] for cell 'inst'
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc:54]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc:56]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc:58]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc:61]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc:63]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc:65]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc:68]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -of [filter [all_fanout -flat -endpoints_only -from [get_pins -filter NAME=~*/Q -of_objects [get_cells -hierarchical -filter {NAME =~ *rxratecounter_i*rxusrclk2_en156*}]]] {NAME =~ *WE}]'. [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc:70]
+WARNING: [Designutils 20-1567] Use of 'set_multicycle_path' with '-hold' is not supported by synthesis. The constraint will not be passed to synthesis. [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc:71]
+Finished Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc] for cell 'inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/ten_gig_eth_pcs_pma_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/ten_gig_eth_pcs_pma_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/ten_gig_eth_pcs_pma_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/ten_gig_eth_pcs_pma_0_synth_1/dont_touch.xdc]
+Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_clocks.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_clocks.xdc] for cell 'inst'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1811.930 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 44 instances were transformed.
+  MUXCY_L => MUXCY: 44 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1824.594 ; gain = 12.664
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/ten_gig_eth_pcs_pma_0_synth_1/dont_touch.xdc}, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:15 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'mcp1_state_reg' in module 'ten_gig_eth_pcs_pma_v6_0_26_idle_delete'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ten_gig_eth_pcs_pma_v6_0_26_tx_pcs_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'mcp1_state_reg' in module 'ten_gig_eth_pcs_pma_v6_0_26_rx_block_lock_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'mcp1_state_reg' in module 'ten_gig_eth_pcs_pma_v6_0_26_rx_ber_mon_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'mcp1_state_reg' in module 'ten_gig_eth_pcs_pma_v6_0_26_rx_pcs_fsm'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ten_gig_eth_pcs_pma_v6_0_26_cs_ipif_access'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'ten_gig_eth_pcs_pma_v6_0_26_drp_ipif'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                STRAIGHT |                              000 |                              000
+                 DELETE3 |                              001 |                              010
+                 DELETE1 |                              010 |                              001
+                 TWISTED |                              011 |                              100
+        POSSIBLE_DELETE4 |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mcp1_state_reg' using encoding 'sequential' in module 'ten_gig_eth_pcs_pma_v6_0_26_idle_delete'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 TX_INIT |                              000 |                              000
+                    TX_E |                              001 |                              100
+                    TX_C |                              010 |                              001
+                    TX_D |                              011 |                              010
+                    TX_T |                              100 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ten_gig_eth_pcs_pma_v6_0_26_tx_pcs_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               LOCK_INIT |                               00 |                               00
+               RESET_CNT |                               01 |                               01
+   TEST_VALID_INVALID_SH |                               10 |                               10
+                    SLIP |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mcp1_state_reg' using encoding 'sequential' in module 'ten_gig_eth_pcs_pma_v6_0_26_rx_block_lock_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             BER_MT_INIT |                              000 |                              000
+             START_TIMER |                              001 |                              001
+             BER_TEST_SH |                              010 |                              010
+              BER_BAD_SH |                              011 |                              011
+                  HI_BER |                              100 |                              100
+                GOOD_BER |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mcp1_state_reg' using encoding 'sequential' in module 'ten_gig_eth_pcs_pma_v6_0_26_rx_ber_mon_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 RX_INIT |                              000 |                              000
+                    RX_E |                              001 |                              100
+                    RX_T |                              010 |                              011
+                    RX_C |                              011 |                              001
+                    RX_D |                              100 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mcp1_state_reg' using encoding 'sequential' in module 'ten_gig_eth_pcs_pma_v6_0_26_rx_pcs_fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                              000
+                  RDREQ1 |                               01 |                              001
+              RDPENDING1 |                               10 |                              010
+                 RDRESP1 |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ten_gig_eth_pcs_pma_v6_0_26_cs_ipif_access'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                     REQ |                               01 |                               01
+                     GNT |                               10 |                               10
+                    GNT1 |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'ten_gig_eth_pcs_pma_v6_0_26_drp_ipif'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:18 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3321] set_false_path : Empty from list for constraint at line 76 of {c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc}. [{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc}:76]
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:38 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:41 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:42 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:42 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:42 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:42 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |BUFG          |     2|
+|2     |BUFH          |     1|
+|3     |CARRY4        |    54|
+|4     |GTHE2_CHANNEL |     1|
+|5     |GTHE2_COMMON  |     1|
+|6     |IBUFDS_GTE2   |     1|
+|7     |LUT1          |   115|
+|8     |LUT2          |   319|
+|9     |LUT3          |   373|
+|10    |LUT4          |   389|
+|11    |LUT5          |   258|
+|12    |LUT6          |   812|
+|13    |MUXCY_L       |    44|
+|14    |MUXF7         |     2|
+|15    |RAM32M        |    23|
+|16    |RAM32X1D      |     2|
+|17    |FDCE          |    21|
+|18    |FDPE          |    77|
+|19    |FDRE          |  2620|
+|20    |FDSE          |   199|
+|21    |LDCE          |     1|
+|22    |IBUF          |     2|
++------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:42 . Memory (MB): peak = 1824.594 ; gain = 723.727
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1072 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:38 . Memory (MB): peak = 1824.594 ; gain = 607.871
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:42 . Memory (MB): peak = 1824.594 ; gain = 723.727
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1824.594 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 125 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1824.594 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 41 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 16 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 23 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+Synth Design complete | Checksum: c7f01463
+INFO: [Common 17-83] Releasing license: Synthesis
+81 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:50 . Memory (MB): peak = 1824.594 ; gain = 1336.055
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1824.594 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/ten_gig_eth_pcs_pma_0_synth_1/ten_gig_eth_pcs_pma_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP ten_gig_eth_pcs_pma_0, cache-ID = d4f24a937f98860c
+INFO: [Coretcl 2-1174] Renamed 105 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1824.594 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/ten_gig_eth_pcs_pma_0_synth_1/ten_gig_eth_pcs_pma_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file ten_gig_eth_pcs_pma_0_utilization_synth.rpt -pb ten_gig_eth_pcs_pma_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 22 12:33:08 2026...

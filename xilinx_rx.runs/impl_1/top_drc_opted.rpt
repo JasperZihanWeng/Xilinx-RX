@@ -1,0 +1,48 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Thu Jul 23 11:53:33 2026
+| Host         : ECE-OP7010PC2 running 64-bit major release  (build 9200)
+| Command      : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+| Design       : top
+| Device       : xc7vx690tffg1761-2
+| Speed File   : -2
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 2
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| NDRV-5 | Warning  | DriverAndLoadless Nets | 2          |
++--------+----------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+NDRV-5#1 Warning
+DriverAndLoadless Nets  
+Undriven nets found. Running opt_design will clean up the undriven nets from your design. Please ensure that opt_design has been run on your design and check the remaining
+nets for DONT_TOUCH properties. The undriven nets in your design are: Bus Net xgmii_rxc[7:0] has undriven and unloaded bits 0:7.
+Related violations: <none>
+
+NDRV-5#2 Warning
+DriverAndLoadless Nets  
+Undriven nets found. Running opt_design will clean up the undriven nets from your design. Please ensure that opt_design has been run on your design and check the remaining
+nets for DONT_TOUCH properties. The undriven nets in your design are: Bus Net xgmii_rxd[63:0] has undriven and unloaded bits 0:63.
+Related violations: <none>
+
+

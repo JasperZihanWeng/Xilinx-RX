@@ -1,0 +1,3 @@
+DESIGN=qwn
+CHANNEL=gth_sfp_support_i/inst/gth_sfp_init_i/gth_sfp_i/gt0_gth_sfp_i/gthe2_i LOC=GTHE2_CHANNEL_X1Y12
+COMMON=gth_sfp_support_i/inst/common0_i/gthe2_common_i LOC=GTHE2_COMMON_X1Y3

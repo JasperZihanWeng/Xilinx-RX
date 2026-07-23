@@ -1,0 +1,3 @@
+DESIGN=xilinx_rx
+CHANNEL=pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/gthe2_i LOC=GTHE2_CHANNEL_X1Y12
+COMMON=pcs_pma/inst/ten_gig_eth_pcs_pma_gt_common_block/gthe2_common_0_i LOC=GTHE2_COMMON_X1Y3

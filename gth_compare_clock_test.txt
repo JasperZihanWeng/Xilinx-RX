@@ -1,0 +1,3 @@
+DESIGN=clock_test
+CHANNEL=clock_test_support_i/clock_test_init_i/inst/clock_test_i/gt0_clock_test_i/gthe2_i LOC=GTHE2_CHANNEL_X1Y12
+COMMON=clock_test_support_i/common0_i/gthe2_common_i LOC=GTHE2_COMMON_X1Y3
