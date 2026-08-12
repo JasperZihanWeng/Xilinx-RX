@@ -122,7 +122,9 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.statsThreshold 360
   set_param chipscope.maxJobs 6
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7vx690tffg1761-2
@@ -138,7 +140,7 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/top.dcp}}
-  read_ip -quiet {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci}}
+  read_ip -quiet {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci}}
 OPTRACE "read constraints: implementation" START { }
   read_xdc {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/constrs_1/new/vc709.xdc}}
 OPTRACE "read constraints: implementation" END { }

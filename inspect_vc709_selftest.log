@@ -1,0 +1,79 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Aug 12 10:29:58 2026
+# Process ID: 29648
+# Current directory: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx
+# Command line: vivado.exe -mode batch -source .\inspect_vc709_selftest.tcl -nojournal -log inspect_vc709_selftest.log
+# Log file: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/inspect_vc709_selftest.log
+# Journal file: 
+# Running On: ECE-OP7010PC2, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 34033 MB
+#-----------------------------------------------------------
+source {.\inspect_vc709_selftest.tcl}
+# open_checkpoint {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/vc709_pcs_selftest_direct_build/vc709_pcs_selftest_routed.dcp}
+Command: open_checkpoint {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/vc709_pcs_selftest_direct_build/vc709_pcs_selftest_routed.dcp}
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 398.895 ; gain = 7.844
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1176.914 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 79 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1300.910 ; gain = 0.805
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Constraints 18-5170] The checkpoint was created with non-default parameter values which do not match the current Vivado settings.  Mismatching parameters are:
+  general.maxThreads
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2139.215 ; gain = 0.000
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2139.215 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 2139.215 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2139.215 ; gain = 0.000
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 2139.215 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.141 . Memory (MB): peak = 2139.215 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.184 . Memory (MB): peak = 2139.215 ; gain = 1.965
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2139.215 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 11 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 11 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2023.2 (64-bit) build 4029153
+open_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:24 . Memory (MB): peak = 2139.215 ; gain = 1756.555
+# set report_path {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/vc709_pcs_selftest_inspection.txt}
+# set fp [open $report_path w]
+# puts $fp "SELF-TEST CELLS"
+# foreach c [get_cells -hierarchical -filter {NAME =~ *selftest*}] {
+#     puts $fp $c
+# }
+# puts $fp "\nPACKET MONITOR CELLS"
+# foreach c [get_cells -hierarchical -filter {NAME =~ *packet_monitor*}] {
+#     puts $fp $c
+# }
+# puts $fp "\nCORE CLOCK NET"
+# foreach n [get_nets -hierarchical -filter {NAME =~ *coreclk*}] {
+#     puts $fp "$n loads=[llength [get_pins -quiet -of_objects $n -filter {DIRECTION == IN}]]"
+# }
+# puts $fp "\nLED DRIVERS"
+# foreach p [get_ports {gpio_led[*]}] {
+#     set n [get_nets -quiet -of_objects $p]
+#     puts $fp "$p net=$n driver=[get_pins -quiet -leaf -of_objects $n -filter {DIRECTION == OUT}]"
+# }
+# puts $fp "\nCLOCKS"
+# foreach c [get_clocks] {
+#     puts $fp "$c period=[get_property PERIOD $c]"
+# }
+# close $fp
+# close_project
+# exit
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 12 10:30:25 2026...

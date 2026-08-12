@@ -1,0 +1,42 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Wed Aug 12 11:06:09 2026
+| Host         : ECE-OP7010PC2 running 64-bit major release  (build 9200)
+| Command      : report_drc -file {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/vc709_pma_selftest_drc.rpt}
+| Design       : top
+| Device       : xc7vx690tffg1761-2
+| Speed File   : -2
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: top
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 1
++-----------+----------+-------------------+------------+
+| Rule      | Severity | Description       | Violations |
++-----------+----------+-------------------+------------+
+| RTSTAT-10 | Warning  | No routable loads | 1          |
++-----------+----------+-------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+RTSTAT-10#1 Warning
+No routable loads  
+72 net(s) have no routable loads. The problem bus(es) and/or net(s) are pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/ten_gig_eth_pcs_pma_0_core/ten_gig_eth_pcs_pma_inst/G_IS_BASER.ten_gig_eth_pcs_pma_inst/BASER.ten_gig_eth_pcs_pma_inst/xgmii_txc_reg2[7:0]
+pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/ten_gig_eth_pcs_pma_0_core/ten_gig_eth_pcs_pma_inst/G_IS_BASER.ten_gig_eth_pcs_pma_inst/BASER.ten_gig_eth_pcs_pma_inst/xgmii_txd_reg2[63:0].
+Related violations: <none>
+
+

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Thu Jul 23 11:54:42 2026
+| Date         : Thu Jul 23 12:47:33 2026
 | Host         : ECE-OP7010PC2 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -62,7 +62,7 @@ Related violations: <none>
 
 LUTAR-1#4 Warning
 LUT drives async reset alert  
-LUT cell system_clock_divider/sfp1_tx_disable_OBUF_inst_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/ten_gig_eth_pcs_pma_0_local_clock_reset_block/coreclk_areset_sync_i/sync1_r_reg[0]/PRE,
+LUT cell system_clock_divider/packet_monitor_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/ten_gig_eth_pcs_pma_0_local_clock_reset_block/coreclk_areset_sync_i/sync1_r_reg[0]/PRE,
 pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/ten_gig_eth_pcs_pma_0_local_clock_reset_block/coreclk_areset_sync_i/sync1_r_reg[1]/PRE,
 pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/ten_gig_eth_pcs_pma_0_local_clock_reset_block/coreclk_areset_sync_i/sync1_r_reg[2]/PRE,
 pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/ten_gig_eth_pcs_pma_0_local_clock_reset_block/coreclk_areset_sync_i/sync1_r_reg[3]/PRE,
@@ -77,7 +77,7 @@ pcs_pma/inst/ten_gig_eth_pcs_pma_shared_clock_reset_block/areset_coreclk_sync_i/
 pcs_pma/inst/ten_gig_eth_pcs_pma_shared_clock_reset_block/areset_coreclk_sync_i/sync1_r_reg[2]/PRE,
 pcs_pma/inst/ten_gig_eth_pcs_pma_shared_clock_reset_block/areset_coreclk_sync_i/sync1_r_reg[3]/PRE,
 pcs_pma/inst/ten_gig_eth_pcs_pma_shared_clock_reset_block/areset_coreclk_sync_i/sync1_r_reg[4]/PRE
- (the first 15 of 20 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+ (the first 15 of 47 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -88,50 +88,42 @@ Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An output delay is missing on gpio_led[0] relative to the rising and/or falling clock edge(s) of gt_refclk_p
-pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/gthe2_i/TXOUTCLK.
+An output delay is missing on gpio_led[0] relative to the rising and/or falling clock edge(s) of gt_refclk_p.
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An output delay is missing on gpio_led[1] relative to the rising and/or falling clock edge(s) of gt_refclk_p
-pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/gthe2_i/TXOUTCLK.
+An output delay is missing on gpio_led[1] relative to the rising and/or falling clock edge(s) of gt_refclk_p.
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An output delay is missing on gpio_led[2] relative to the rising and/or falling clock edge(s) of gt_refclk_p
-pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/gthe2_i/TXOUTCLK.
+An output delay is missing on gpio_led[2] relative to the rising and/or falling clock edge(s) of gt_refclk_p.
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An output delay is missing on gpio_led[3] relative to the rising and/or falling clock edge(s) of gt_refclk_p
-pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/gthe2_i/TXOUTCLK.
+An output delay is missing on gpio_led[3] relative to the rising and/or falling clock edge(s) of gt_refclk_p.
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An output delay is missing on gpio_led[4] relative to the rising and/or falling clock edge(s) of gt_refclk_p
-pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/gthe2_i/TXOUTCLK.
+An output delay is missing on gpio_led[4] relative to the rising and/or falling clock edge(s) of gt_refclk_p.
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An output delay is missing on gpio_led[5] relative to the rising and/or falling clock edge(s) of gt_refclk_p
-pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/gthe2_i/TXOUTCLK.
+An output delay is missing on gpio_led[5] relative to the rising and/or falling clock edge(s) of gt_refclk_p.
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An output delay is missing on gpio_led[6] relative to the rising and/or falling clock edge(s) of gt_refclk_p
-pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/gthe2_i/TXOUTCLK.
+An output delay is missing on gpio_led[6] relative to the rising and/or falling clock edge(s) of gt_refclk_p.
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An output delay is missing on gpio_led[7] relative to the rising and/or falling clock edge(s) of gt_refclk_p
-pcs_pma/inst/ten_gig_eth_pcs_pma_block_i/gt0_gtwizard_10gbaser_multi_gt_i/gt0_gtwizard_gth_10gbaser_i/gthe2_i/TXOUTCLK.
+An output delay is missing on gpio_led[7] relative to the rising and/or falling clock edge(s) of gt_refclk_p.
 Related violations: <none>
 
 

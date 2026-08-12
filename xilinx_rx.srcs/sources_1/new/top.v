@@ -1,7 +1,14 @@
 `timescale 1ns / 1ps
 `default_nettype none
 
-module top (
+module top #(
+    // Keep the normal receive-only behavior as the default.  The isolated
+    // self-test build overrides this parameter to exercise the Xilinx PCS
+    // encoder and decoder without an SFP or optical cable.
+    parameter PCS_LOOPBACK_TEST = 1'b0,
+    parameter PMA_LOOPBACK_TEST = 1'b0,
+    parameter OPTICAL_LOOPBACK_TEST = 1'b0
+) (
     input  wire sysclk_p,
     input  wire sysclk_n,
     input  wire cpu_reset_n,
@@ -31,8 +38,14 @@ module top (
     wire sysclk_200;
     wire dclk_100;
     wire dclk_locked;
-    wire reset_button = ~cpu_reset_n;
+    // VC709 SW8 CPU_RESET is active-high: the pin is low normally and high
+    // while the pushbutton is held.  The port name is retained to avoid
+    // changing the board constraint, but it must not be inverted here.
+    wire reset_button = cpu_reset_n;
     wire pcs_reset = reset_button | ~dclk_locked;
+    wire selftest_mode = PCS_LOOPBACK_TEST |
+                         PMA_LOOPBACK_TEST |
+                         OPTICAL_LOOPBACK_TEST;
     wire si570_forward;
 
     // The same VC709 clock arrangement used by clock_test_ex: forward the
@@ -78,33 +91,57 @@ module top (
     (* mark_debug = "true" *) wire core_txuserrdy;
     (* mark_debug = "true" *) wire core_reset_counter_done;
 
+    // Simple clock-domain heartbeats for board bring-up.  These make it
+    // possible to distinguish a configured core from clocks that are truly
+    // advancing in hardware, without requiring an ILA.
+    reg [25:0] sysclk_heartbeat = 26'd0;
+    reg [25:0] dclk_heartbeat = 26'd0;
+    reg [25:0] coreclk_heartbeat = 26'd0;
+
+    // These are intentionally reset-free diagnostics. Their initial values
+    // are loaded by FPGA configuration, after which any live clock must make
+    // its LED toggle even if the main reset chain is stuck.
+    always @(posedge sysclk_200) begin
+        sysclk_heartbeat <= sysclk_heartbeat + 1'b1;
+    end
+
+    always @(posedge dclk_100) begin
+        dclk_heartbeat <= dclk_heartbeat + 1'b1;
+    end
+
+    always @(posedge coreclk) begin
+        coreclk_heartbeat <= coreclk_heartbeat + 1'b1;
+    end
+
     // The SFP+ cage has a separate, active-high laser-disable input.  UG887
     // Table 1-14 routes it to AB41; leaving this pin unconstrained can keep the
-    // module transmitter off. For optical bring-up, explicitly enable TX once
-    // the clocks are stable, independently of the PCS-requested disable, and
-    // select the high-rate operating mode on both SFP rate-select pins.
-    assign sfp1_tx_disable = pcs_reset;
+    // Keep the laser disabled in normal RX-only and internal-loopback builds.
+    // The dedicated optical test enables P3/SFP1 only after reset releases;
+    // the core can still request a shutdown through core_tx_disable.
+    assign sfp1_tx_disable = OPTICAL_LOOPBACK_TEST
+                             ? (pcs_reset | core_tx_disable)
+                             : 1'b1;
     assign sfp1_rs0 = 1'b1;
     // VC709 guidance requires RS1 low (receiver rate select grounded).
     assign sfp1_rs1 = 1'b0;
 
-    // Periodic XGMII test frames make an optical TX-to-RX loopback visible on
-    // the packet LEDs without requiring the Lattice board.
-    wire [63:0] xgmii_txd;
-    wire [7:0]  xgmii_txc;
-    (* mark_debug = "true" *) wire [31:0] tx_packet_count;
+    // In the normal RX build the transmit side sends only legal idles.  In
+    // the PCS self-test build it sends a recognizable frame every 250 ms.
+    wire [63:0] selftest_xgmii_txd;
+    wire [7:0]  selftest_xgmii_txc;
+    wire [31:0] selftest_tx_packet_count;
+    wire [63:0] xgmii_txd = selftest_mode
+                            ? selftest_xgmii_txd
+                            : 64'h0707_0707_0707_0707;
+    wire [7:0]  xgmii_txc = selftest_mode
+                            ? selftest_xgmii_txc
+                            : 8'hff;
 
-    xgmii_test_transmitter test_transmitter (
-        .clk(coreclk),
-        .reset(~pcs_resetdone),
-        .xgmii_txd(xgmii_txd),
-        .xgmii_txc(xgmii_txc),
-        .packet_count(tx_packet_count)
-    );
-
-    // The configuration-vector default (all zero) enables normal operation:
-    // no reset, loopback, test pattern, or global transmit disable.
-    wire [535:0] configuration_vector = 536'b0;
+    // Xilinx's generated example design defines bit 110 as PCS loopback.
+    // All other controls remain at their normal zero values.
+    wire [535:0] configuration_vector =
+        {{425{1'b0}}, PCS_LOOPBACK_TEST, {110{1'b0}}} |
+        {{535{1'b0}}, PMA_LOOPBACK_TEST};
 
     // Loop the core's PCS-requested DRP transaction into its internal GTH.
     wire        drp_req;
@@ -136,10 +173,9 @@ module top (
         .status_vector(status_vector),
         .core_status(core_status),
         .pma_pmd_type(3'b110),       // 10GBASE-LR optical PMD indication
-        // Do not gate GTH initialization with optical LOS. The generated core
-        // otherwise holds RX in reset while no light is present, making its
-        // combined resetdone_out stay low and obscuring TX-only bring-up.
-        .signal_detect(1'b1),
+        // Internal tests force signal detect. The external optical test uses
+        // the real active-high P3/SFP1 loss-of-signal indication.
+        .signal_detect(OPTICAL_LOOPBACK_TEST ? ~sfp1_los : 1'b1),
         .tx_fault(sfp1_tx_fault),
         .tx_disable(core_tx_disable),
 
@@ -173,18 +209,42 @@ module top (
         .reset_counter_done_out(core_reset_counter_done)
     );
 
+    xgmii_test_transmitter selftest_transmitter (
+        .clk(coreclk),
+        .reset(pcs_reset),
+        .xgmii_txd(selftest_xgmii_txd),
+        .xgmii_txc(selftest_xgmii_txc),
+        .packet_count(selftest_tx_packet_count)
+    );
+
     (* mark_debug = "true" *) wire        rx_in_frame;
     (* mark_debug = "true" *) wire        packet_seen;
     (* mark_debug = "true" *) wire        packet_error;
     (* mark_debug = "true" *) wire        packet_led;
     (* mark_debug = "true" *) wire [31:0] rx_packet_count;
+    reg xgmii_start_seen = 1'b0;
+
+    integer start_lane;
+    always @(posedge coreclk or posedge pcs_reset) begin
+        if (pcs_reset) begin
+            xgmii_start_seen <= 1'b0;
+        end else begin
+            for (start_lane = 0; start_lane < 8; start_lane = start_lane + 1)
+                if (xgmii_rxc[start_lane] &&
+                    xgmii_rxd[start_lane*8 +: 8] == 8'hfb)
+                    xgmii_start_seen <= 1'b1;
+        end
+    end
 
     xgmii_packet_monitor packet_monitor (
         .clk(coreclk),
         .reset(pcs_reset),
         .xgmii_rxd(xgmii_rxd),
         .xgmii_rxc(xgmii_rxc),
-        .block_lock(core_status[0]),
+        // AMD PG068 defines PCS loopback as a direct XGMII TX-to-RX path.
+        // It bypasses the serial RX block synchronizer, so block lock is not
+        // expected in this diagnostic mode and must not gate frame counting.
+        .block_lock(PCS_LOOPBACK_TEST ? 1'b1 : core_status[0]),
         .in_frame(rx_in_frame),
         .packet_seen(packet_seen),
         .packet_error(packet_error),
@@ -192,30 +252,36 @@ module top (
         .packet_count(rx_packet_count)
     );
 
-    // Independent core-clock heartbeat. This does not depend on the XGMII
-    // transmitter state machine, so it distinguishes a stopped core clock
-    // from a transmitter that is still held in reset or not advancing.
-    reg [25:0] coreclk_heartbeat = 26'd0;
-    always @(posedge coreclk or negedge pcs_resetdone) begin
-        if (!pcs_resetdone)
-            coreclk_heartbeat <= 26'd0;
-        else
-            coreclk_heartbeat <= coreclk_heartbeat + 1'b1;
-    end
-
     // UG887 Table 1-19 defines these LEDs as active-high.
     //   DS2: QPLL locked              DS6: packet received since reset
     //   DS3: PCS/GTH reset complete   DS7: SFP1 module installed
-    //   DS4: TX frame-count toggle    DS8: SFP1 receiver loss of signal
-    //   DS5: raw coreclk heartbeat    DS9: SFP1 transmitter fault
+    //   DS4: 10GBASE-R block lock     DS8: SFP1 receiver loss of signal
+    //   DS5: recent RX packet pulse   DS9: malformed RX frame seen
     assign gpio_led[0] = qpll_locked;
     assign gpio_led[1] = pcs_resetdone;
-    assign gpio_led[2] = tx_packet_count[0];
-    assign gpio_led[3] = coreclk_heartbeat[25];
-    assign gpio_led[4] = core_tx_disable;
-    assign gpio_led[5] = ~sfp1_mod_abs;
-    assign gpio_led[6] = sfp1_los;
-    assign gpio_led[7] = sfp1_tx_fault;
+    // In self-test DS4 identifies PCS-loopback mode. In the normal receiver
+    // build it retains its original meaning: serial 64b/66b block lock.
+    assign gpio_led[2] = OPTICAL_LOOPBACK_TEST
+                         ? core_status[0]
+                         : (selftest_mode ? 1'b1 : core_status[0]);
+    assign gpio_led[3] = OPTICAL_LOOPBACK_TEST
+                         ? selftest_tx_packet_count[0]
+                         : (selftest_mode ? coreclk_heartbeat[25]
+                                          : packet_led);
+    assign gpio_led[4] = OPTICAL_LOOPBACK_TEST
+                         ? packet_seen
+                         : (selftest_mode ? selftest_tx_packet_count[0]
+                                          : packet_seen);
+    assign gpio_led[5] = OPTICAL_LOOPBACK_TEST
+                         ? ~sfp1_mod_abs
+                         : (selftest_mode
+                            ? (PMA_LOOPBACK_TEST ? core_status[0]
+                                                 : xgmii_start_seen)
+                            : ~sfp1_mod_abs);
+    assign gpio_led[6] = OPTICAL_LOOPBACK_TEST
+                         ? sfp1_los
+                         : (selftest_mode ? packet_seen : sfp1_los);
+    assign gpio_led[7] = packet_error;
 
 endmodule
 

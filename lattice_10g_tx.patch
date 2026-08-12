@@ -1,0 +1,153 @@
+diff --git a/mpcs_1/rtl/top.v b/mpcs_1/rtl/top.v
+--- a/mpcs_1/rtl/top.v
++++ b/mpcs_1/rtl/top.v
+@@ -91,7 +91,7 @@ module top (
+     assign mpcs_rx_usr_clk_i_0    = mpcs_rx_out_clk_int_0;
+     assign mpcs_tx_usr_clk_i_0    = mpcs_tx_out_clk_int_0;
+     assign mpcs_perstn_i_0        = resetn_i;
+-    assign mpcs_tx_pcs_rstn_i_0   = resetn_i & mpcs_ready_int_0;
++    assign mpcs_tx_pcs_rstn_i_0   = resetn_i;
+     assign mpcs_rx_pcs_rstn_i_0   = resetn_i & mpcs_phyrdy_int_0;
+ 
+     // Keep the original output names for LED pins, but show slow clock-alive indicators.
+@@ -142,19 +142,24 @@ module top (
+     localparam [7:0] XGMII_START = 8'hFB;
+     localparam [7:0] XGMII_TERM  = 8'hFD;
+ 
+-    localparam [1:0] TX_IDLE      = 2'd0;
+-    localparam [1:0] TX_START     = 2'd1;
+-    localparam [1:0] TX_DATA      = 2'd2;
+-    localparam [1:0] TX_TERMINATE = 2'd3;
+-
+-    reg [1:0] tx_state;
+-    reg [7:0] tx_gap_count;
++    localparam [3:0] TX_IDLE      = 4'd0;
++    localparam [3:0] TX_START     = 4'd1;
++    localparam [3:0] TX_DATA0     = 4'd2;
++    localparam [3:0] TX_DATA1     = 4'd3;
++    localparam [3:0] TX_DATA2     = 4'd4;
++    localparam [3:0] TX_DATA3     = 4'd5;
++    localparam [3:0] TX_DATA4     = 4'd6;
++    localparam [3:0] TX_DATA5     = 4'd7;
++    localparam [3:0] TX_DATA6     = 4'd8;
++    localparam [3:0] TX_DATA7     = 4'd9;
++    localparam [3:0] TX_TERMINATE = 4'd10;
++
++    reg [3:0] tx_state;
++    reg [15:0] tx_gap_count;
+     reg [1:0] switch_meta;
+     reg [1:0] switch_tx;
+-    reg [7:0] tx_sequence;
++    reg [31:0] tx_sequence;
+     reg [63:0] xgmii_txd_0;
+     reg [7:0]  xgmii_txc_0;
+ 
+@@ -162,7 +167,7 @@ module top (
+         if (!resetn_i) begin
+             tx_state    <= TX_IDLE;
+-            tx_gap_count <= 8'd64;
++            tx_gap_count <= 16'd65535;
+             switch_meta <= 2'b00;
+             switch_tx   <= 2'b00;
+-            tx_sequence <= 8'd0;
++            tx_sequence <= 32'd0;
+             xgmii_txd_0 <= {8{XGMII_IDLE}};
+             xgmii_txc_0 <= 8'hff;
+             debug_LED_6 <= 1'b0;
+@@ -170,7 +175,7 @@ module top (
+         end
+         else if (!mpcs_ready_int_0) begin
+             tx_state    <= TX_IDLE;
+-            tx_gap_count <= 8'd64;
++            tx_gap_count <= 16'd65535;
+             xgmii_txd_0 <= {8{XGMII_IDLE}};
+             xgmii_txc_0 <= 8'hff;
+             debug_LED_6 <= 1'b0;
+@@ -186,7 +191,7 @@ module top (
+                     debug_LED_6 <= switch_tx[1];
+                     debug_LED_7 <= switch_tx[0];
+ 
+-                    if (tx_gap_count == 8'd0)
++                    if (tx_gap_count == 16'd0)
+                         tx_state <= TX_START;
+                     else
+                         tx_gap_count <= tx_gap_count - 1'b1;
+@@ -194,16 +199,53 @@ module top (
+ 
+                 TX_START: begin
+-                    xgmii_txd_0 <= {8'h55, 8'h44, tx_sequence, 8'h22,
+-                                    8'h11, 8'h00, {6'b0, switch_tx}, XGMII_START};
++                    // Lane 0 is /S/, lanes 1-6 are preamble, lane 7 is SFD.
++                    xgmii_txd_0 <= {8'hD5, {6{8'h55}}, XGMII_START};
+                     xgmii_txc_0 <= 8'b0000_0001;
+-                    tx_state    <= TX_DATA;
++                    tx_state    <= TX_DATA0;
+                 end
+ 
+-                TX_DATA: begin
+-                    xgmii_txd_0 <= {32'h4C_41_54_54, 8'h00, 8'h00,
+-                                    tx_sequence, {6'b0, switch_tx}};
++                TX_DATA0: begin
++                    xgmii_txd_0 <= 64'h0200_0000_0002_0200;
++                    xgmii_txc_0 <= 8'h00;
++                    tx_state    <= TX_DATA1;
++                end
++
++                TX_DATA1: begin
++                    xgmii_txd_0 <= {16'hCAFE, tx_sequence, 14'h0, switch_tx};
++                    xgmii_txc_0 <= 8'h00;
++                    tx_state    <= TX_DATA2;
++                end
++
++                TX_DATA2: begin
++                    xgmii_txd_0 <= 64'h4C41_5454_4943_4554;
++                    xgmii_txc_0 <= 8'h00;
++                    tx_state    <= TX_DATA3;
++                end
++
++                TX_DATA3: begin
++                    xgmii_txd_0 <= 64'h585F_544F_5F56_4337;
++                    xgmii_txc_0 <= 8'h00;
++                    tx_state    <= TX_DATA4;
++                end
++
++                TX_DATA4: begin
++                    xgmii_txd_0 <= 64'h3039_5F52_585F_5445;
++                    xgmii_txc_0 <= 8'h00;
++                    tx_state    <= TX_DATA5;
++                end
++
++                TX_DATA5: begin
++                    xgmii_txd_0 <= 64'h5354_5F46_5241_4D45;
++                    xgmii_txc_0 <= 8'h00;
++                    tx_state    <= TX_DATA6;
++                end
++
++                TX_DATA6: begin
++                    xgmii_txd_0 <= 64'h1122_3344_5566_7788;
++                    xgmii_txc_0 <= 8'h00;
++                    tx_state    <= TX_DATA7;
++                end
++
++                TX_DATA7: begin
++                    xgmii_txd_0 <= 64'h99AA_BBCC_DDEE_FF00;
+                     xgmii_txc_0 <= 8'h00;
+                     tx_state    <= TX_TERMINATE;
+                 end
+@@ -213,7 +255,7 @@ module top (
+                     xgmii_txd_0  <= {{7{XGMII_IDLE}}, XGMII_TERM};
+                     xgmii_txc_0  <= 8'hff;
+                     tx_sequence  <= tx_sequence + 1'b1;
+-                    tx_gap_count <= 8'd64;
++                    tx_gap_count <= 16'd65535;
+                     tx_state     <= TX_IDLE;
+                 end
+@@ -263,7 +305,7 @@ module top (
+     assign mpcs_txhiz_i_0   = 1'b0;
+     assign mpcs_rxerr_i_0   = 1'b0;
+     assign mpcs_fomreq_i_0  = 1'b0;
+-    assign mpcs_txval_i_0   = resetn_i & mpcs_ready_int_0;
++    assign mpcs_txval_i_0   = 1'b1;
+     assign mpcs_rxoob_i_0   = 1'b0;
+     assign mpcs_txdeemp_i_0 = 1'b0;
+     assign mpcs_skipbit_i_0 = 1'b0;

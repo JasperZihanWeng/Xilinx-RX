@@ -1,0 +1,10 @@
+-------------------------------------
+| Tool Version : Vivado v.2023.2
+| Date         : Thu Jul 23 12:41:13 2026
+| Host         : ECE-OP7010PC2
+| Design       : design_1
+| Device       : xc7vx690t-ffg1761-2--
+-------------------------------------
+
+For more information on clockInfo.txt clock routing debug file see https://support.xilinx.com/s/article/000035660?language=en_US
+

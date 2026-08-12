@@ -3782,6 +3782,87 @@
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
+        <spirit:name>xilinx_examples</spirit:name>
+        <spirit:displayName>Examples</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:examples</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_examples_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Thu Jul 23 17:11:37 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:7fd92bc2</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductLicenses</spirit:name>
+            <spirit:value>ten_gig_eth_pcs_pma_basekr@2015.04(DESIGN_LINKING)</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_examplesscript</spirit:name>
+        <spirit:displayName>Examples Script</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:examples.script</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_examplesscript_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Thu Jul 23 17:11:37 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:7fd92bc2</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductLicenses</spirit:name>
+            <spirit:value>ten_gig_eth_pcs_pma_basekr@2015.04(DESIGN_LINKING)</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_examplesscriptext</spirit:name>
+        <spirit:displayName>Examples Script Extension</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:examples.scriptext</spirit:envIdentifier>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:7fd92bc2</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductLicenses</spirit:name>
+            <spirit:value>ten_gig_eth_pcs_pma_basekr@2015.04(DESIGN_LINKING)</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_examplessimulation</spirit:name>
+        <spirit:displayName>Examples Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:examples.simulation</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_examplessimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Thu Jul 23 17:11:37 UTC 2026</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:7fd92bc2</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductLicenses</spirit:name>
+            <spirit:value>ten_gig_eth_pcs_pma_basekr@2015.04(DESIGN_LINKING)</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
         <spirit:name>xilinx_externalfiles</spirit:name>
         <spirit:displayName>External Files</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
@@ -8848,6 +8929,31 @@
       <spirit:file>
         <spirit:name>elaborate/configure_gt.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_examples_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>example_design/ten_gig_eth_pcs_pma_0_example_design.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>example_design/ten_gig_eth_pcs_pma_0_example_design.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_examplesscript_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>ten_gig_eth_pcs_pma_0_ex.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_examplessimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>simulation/demo_tb.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>

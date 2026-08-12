@@ -1,0 +1,94 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Aug 12 10:07:13 2026
+# Process ID: 41348
+# Current directory: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx
+# Command line: vivado.exe -mode batch -source .\build_vc709_pcs_selftest.tcl -nojournal -log vc709_pcs_selftest_direct.log
+# Log file: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/vc709_pcs_selftest_direct.log
+# Journal file: 
+# Running On: ECE-OP7010PC2, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 34033 MB
+#-----------------------------------------------------------
+CRITICAL WARNING: [Common 17-741] No write access right to the local Tcl store at 'C'. XilinxTclStore is reverted to the installation area. If you want to use local Tcl Store, please change the access right and relaunch Vivado.
+source {.\build_vc709_pcs_selftest.tcl}
+# set workspace_dir {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx}
+# set build_dir "$workspace_dir/vc709_pcs_selftest_direct_build"
+# set_param general.maxThreads 1
+# create_project vc709_pcs_selftest $build_dir -part xc7vx690tffg1761-2 -force
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 566.996 ; gain = 180.828
+# add_files [list "$workspace_dir/xilinx_rx.srcs/sources_1/new/top.v"]
+# add_files [list "$workspace_dir/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci"]
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [Vivado 12-13650] The IP file 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' has been moved from its original location, as a result the outputs for this IP will now be generated in 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0'. Alternatively a copy of the IP can be imported into the project using one of the 'import_ip' or 'import_files' commands.
+# add_files -fileset constrs_1 [list "$workspace_dir/xilinx_rx.srcs/constrs_1/new/vc709.xdc"]
+# set_property top top [current_fileset]
+# set_property generic {PCS_LOOPBACK_TEST=1} [current_fileset]
+# update_compile_order -fileset sources_1
+# synth_design -top top -part xc7vx690tffg1761-2
+Command: synth_design -top top -part xc7vx690tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2024.06' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 30548
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:04 . Memory (MB): peak = 1628.215 ; gain = 438.535
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v:4]
+	Parameter PCS_LOOPBACK_TEST bound to: 1 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:73646]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:73646]
+INFO: [Synth 8-6157] synthesizing module 'stable_clock_100' [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v:411]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:82294]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 5.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 5.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:82294]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'stable_clock_100' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v:411]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:93073]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:93073]
+INFO: [Synth 8-6157] synthesizing module 'ten_gig_eth_pcs_pma_0' [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/.Xil/Vivado-41348-ECE-OP7010PC2/realtime/ten_gig_eth_pcs_pma_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ten_gig_eth_pcs_pma_0' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/.Xil/Vivado-41348-ECE-OP7010PC2/realtime/ten_gig_eth_pcs_pma_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xgmii_test_transmitter' [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v:228]
+INFO: [Synth 8-6155] done synthesizing module 'xgmii_test_transmitter' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v:228]
+INFO: [Synth 8-6157] synthesizing module 'xgmii_packet_monitor' [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v:341]
+INFO: [Synth 8-6155] done synthesizing module 'xgmii_packet_monitor' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v:341]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v:4]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'pcs_pma'. This will prevent further optimization [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v:122]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'packet_monitor'. This will prevent further optimization [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v:194]
+WARNING: [Synth 8-3917] design top has port sfp1_tx_disable driven by constant 1
+WARNING: [Synth 8-3917] design top has port sfp1_rs0 driven by constant 1
+WARNING: [Synth 8-3917] design top has port sfp1_rs1 driven by constant 0
+WARNING: [Synth 8-3917] design top has port gpio_led[6] driven by constant 1
+WARNING: [Synth 8-7129] Port sfp1_mod_abs in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sfp1_los in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1738.918 ; gain = 549.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1738.918 ; gain = 549.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1738.918 ; gain = 549.238
+---------------------------------------------------------------------------------
+error deleting "C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/.Xil/Vivado-41348-ECE-OP7010PC2/realtime/tmp": no such file or directory
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 6 Warnings, 0 Critical Warnings and 1 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Wed Aug 12 10:07:34 2026...

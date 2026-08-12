@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Jul 23 12:11:38 2026
+# Process ID: 109080
+# Current directory: c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/pcs_pma_example/ten_gig_eth_pcs_pma_0_ex
+# Command line: vivado.exe -notrace -source c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0_ex.tcl -mode batch
+# Log file: c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/pcs_pma_example/ten_gig_eth_pcs_pma_0_ex/vivado.log
+# Journal file: c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/pcs_pma_example/ten_gig_eth_pcs_pma_0_ex\vivado.jou
+# Running On: ECE-OP7010PC2, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 34033 MB
+#-----------------------------------------------------------
+source {c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0_ex.tcl} -notrace
+INFO: [open_example_project] Creating new example project...
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/pcs_pma_example/ten_gig_eth_pcs_pma_0_ex'
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 474.984 ; gain = 182.758
+INFO: [open_example_project] Importing original IP ...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
+INFO: [open_example_project] Generating the example project IP ...
+INFO: [IP_Flow 19-1706] Not generating 'Instantiation Template' target for IP 'ten_gig_eth_pcs_pma_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'ten_gig_eth_pcs_pma_0'. Target already exists and is up to date.
+INFO: [IP_Flow 19-1706] Not generating 'Simulation' target for IP 'ten_gig_eth_pcs_pma_0'. Target already exists and is up to date.
+INFO: [open_example_project] Adding example synthesis HDL files ...
+INFO: [open_example_project] Adding example XDC files ...
+INFO: [open_example_project] Adding simulation HDL files ...
+INFO: [open_example_project] Rebuilding top IP...
+INFO: [exportsim-Tcl-40] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.2/tps/boost_1_72_0'
+ERROR: [exportsim-Tcl-11] failed to create the directory (C:/Users/Kumar/xsim): can't create directory "C:/Users/Kumar/xsim": permission denied
+ERROR: [Common 17-39] 'send_msg_id' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'send_msg_id' failed due to earlier errors.
+
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'send_msg_id' failed due to earlier errors.
+
+
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 23 12:11:51 2026...

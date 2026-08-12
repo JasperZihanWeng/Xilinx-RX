@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.statsThreshold 360
+set_param chipscope.maxJobs 6
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7vx690tffg1761-2
 
@@ -87,7 +90,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v}}
-read_ip -quiet {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci}}
+read_ip -quiet {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci}}
 set_property used_in_implementation false [get_files -all {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_clocks.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0_ooc.xdc}}]
 set_property used_in_implementation false [get_files -all {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/synth/ten_gig_eth_pcs_pma_0.xdc}}]
