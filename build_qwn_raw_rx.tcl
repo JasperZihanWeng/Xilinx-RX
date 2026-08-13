@@ -7,6 +7,7 @@ set_property target_language Verilog [current_project]
 
 add_files [glob [file join $repo_dir source *.v]]
 add_files [list [file join $ref_dir new rx_oversample_cdr_64.v]]
+add_files [list [file join $ref_dir new dec_8b10b.v]]
 add_files [list [file join $ref_dir imports example_design support clock_test_common.v]]
 read_ip [list [file join $repo_dir ip qwn_gt_raw qwn_gt_raw.xci]]
 add_files -fileset constrs_1 [list [file join $repo_dir constraints qwn_raw_rx_vc709.xdc]]
@@ -17,7 +18,7 @@ generate_target all [get_ips qwn_gt_raw]
 
 launch_runs synth_1 -jobs 8
 wait_on_run synth_1
-if {[get_property STATUS [get_runs synth_1]] !~ "synth_design Complete*"} {
+if {![string match "synth_design Complete*" [get_property STATUS [get_runs synth_1]]]} {
     error "Synthesis failed: [get_property STATUS [get_runs synth_1]]"
 }
 
@@ -27,7 +28,7 @@ close_design
 
 launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_run impl_1
-if {[get_property STATUS [get_runs impl_1]] !~ "write_bitstream Complete*"} {
+if {![string match "write_bitstream Complete*" [get_property STATUS [get_runs impl_1]]]} {
     error "Implementation failed: [get_property STATUS [get_runs impl_1]]"
 }
 

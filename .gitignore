@@ -11,5 +11,9 @@ xsim_*.backup.jou
 xsim_*.backup.log
 xvlog.log
 xsim.dir/tb_qwn_k285_monitor_sim/
+xsim.dir/tb_qwn_symbol_decoder_sim/
 xsim.dir/work/qwn_k285_monitor.sdb
 xsim.dir/work/tb_qwn_k285_monitor.sdb
+xsim.dir/work/dec_8b10b.sdb
+xsim.dir/work/qwn_symbol_decoder.sdb
+xsim.dir/work/tb_qwn_symbol_decoder.sdb

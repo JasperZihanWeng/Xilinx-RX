@@ -7,10 +7,10 @@ eight raw samples. The proven `rx_oversample_cdr_64` block from
 `CPCC_QWN/clock_test_ex` chooses the center sample and reconstructs up to eight
 payload bits per fabric cycle.
 
-The first checkpoint deliberately stops before the full CRD/Grid-Lock packet
-path. It continuously searches the recovered stream for both running-disparity
-forms of K28.5, in both possible serializer bit orders. This isolates physical
-link, GT initialization, fabric CDR, and bit-order issues before adding framing.
+The receiver searches for the reversed K28.5 forms observed from the Lattice
+serializer, establishes the 10-bit boundary, reverses each complete symbol,
+and feeds the normalized word to the original `clock_test_ex` 8b/10b decoder.
+This remains a controlled idle-pattern checkpoint before packet framing.
 
 ## Hardware
 
@@ -32,13 +32,12 @@ The Xilinx design is receive-only and holds `SFP1_TX_DISABLE` high.
 | 3 | Recovered 156.25-MHz clock heartbeat |
 | 4 | SFP module present |
 | 5 | SFP reports optical signal (no LOS) |
-| 6 | Normal-order K28.5 observed since reset |
-| 7 | Per-symbol reversed K28.5 observed since reset |
+| 6 | Reversed K28.5 found and 10-bit symbol alignment locked |
+| 7 | Eight consecutive symbols decoded as K28.5 (`K=1`, byte `0xBC`) |
 
-LEDs 6 and 7 require eight matches on the correct 10-bit cadence and are then
-sticky until CPU reset. For the current alternating K28.5 TX, exactly one
-should turn on. That tells us which bit convention to use in the next
-comma/framing stage without accepting a one-off noise match.
+With the current alternating K28.5 transmitter, both LEDs 6 and 7 should turn
+on. LED 7 is sticky until CPU reset. Resetting with the optical cable removed
+must leave LED 7 off; reconnecting must make it qualify again.
 
 ## Rebuild
 
@@ -50,5 +49,6 @@ The generator and build scripts intentionally use the authoritative local
 2. Run `build_qwn_raw_rx.tcl` to synthesize, implement, report, and export the
    bitstream.
 
-Current signoff: routed DRC has 0 violations; setup WNS is +0.326 ns and hold
-WHS is +0.108 ns. The normal/reversed K28.5 classifier passes XSim.
+Current signoff: routed DRC has 0 violations; setup WNS is +0.454 ns and hold
+WHS is +0.108 ns. All ten possible symbol starting offsets align and decode
+K28.5 as `K=1`, byte `0xBC`, without code errors in XSim.

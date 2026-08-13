@@ -132,15 +132,18 @@ module qwn_raw_rx_top (
         .reph_o(recovered_phase)
     );
 
-    wire normal_seen;
-    wire reversed_seen;
-    wire [31:0] normal_count;
-    wire [31:0] reversed_count;
-    qwn_k285_monitor k285_monitor_i (
+    wire [7:0] decoded_byte;
+    wire decoded_k;
+    wire decoded_valid;
+    wire decoded_error;
+    wire comma_locked;
+    wire k285_healthy;
+    qwn_symbol_decoder symbol_decoder_i (
         .clk(rxusrclk2), .rst(datapath_reset),
         .recovered_bits(recovered_bits), .recovered_count(recovered_count),
-        .normal_seen(normal_seen), .reversed_seen(reversed_seen),
-        .normal_count(normal_count), .reversed_count(reversed_count)
+        .byte_o(decoded_byte), .k_o(decoded_k),
+        .byte_valid(decoded_valid), .code_err(decoded_error),
+        .comma_locked(comma_locked), .k285_healthy(k285_healthy)
     );
 
     reg [25:0] rx_heartbeat = 26'd0;
@@ -148,19 +151,19 @@ module qwn_raw_rx_top (
         if (datapath_reset) rx_heartbeat <= 26'd0;
         else rx_heartbeat <= rx_heartbeat + 1'b1;
 
-    // DS2..DS9 are active-high.  LEDs 6 and 7 are intentionally separate:
-    // exactly one should light once the transmitted K28.5 order is known.
+    // DS2..DS9 are active-high. The physical-link indicators are unchanged;
+    // LEDs 6/7 now prove symbol alignment and actual 8b/10b decoding.
     assign gpio_led[0] = stable_locked;
     assign gpio_led[1] = qpll_lock;
     assign gpio_led[2] = rx_fsm_done & rx_reset_done;
     assign gpio_led[3] = rx_heartbeat[25];
     assign gpio_led[4] = ~sfp1_mod_abs;
     assign gpio_led[5] = ~sfp1_los;
-    assign gpio_led[6] = normal_seen;
-    assign gpio_led[7] = reversed_seen;
+    assign gpio_led[6] = comma_locked;
+    assign gpio_led[7] = k285_healthy;
 
     wire _unused = &{1'b0, sfp1_tx_fault, recovered_phase,
-                     normal_count[0], reversed_count[0]};
+                     decoded_byte, decoded_k, decoded_valid, decoded_error};
 endmodule
 
 `default_nettype wire
