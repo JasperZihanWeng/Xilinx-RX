@@ -1,0 +1,15 @@
+# Vivado transient projects and per-machine state
+.Xil/
+.gt_ip_work/
+qwn_raw_rx_build/
+
+# XSim products (the repository contains some older tracked products)
+xelab.log
+xsim.jou
+xsim.log
+xsim_*.backup.jou
+xsim_*.backup.log
+xvlog.log
+xsim.dir/tb_qwn_k285_monitor_sim/
+xsim.dir/work/qwn_k285_monitor.sdb
+xsim.dir/work/tb_qwn_k285_monitor.sdb
