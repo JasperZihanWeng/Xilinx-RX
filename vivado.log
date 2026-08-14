@@ -122,10 +122,15 @@ INFO: [Labtools 27-3164] End of startup status: HIGH
 program_hw_devices: Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1794.414 ; gain = 0.000
 refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
 INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-ynth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_header.v:116]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_header.v:126]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_header.v:101]
-INFO: [Synth 8-6155] done synthesizing module 'rx_header' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_header.v:39]
+set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
+set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx.bit} [get_hw_devices xc7vx690t_0_1]
+program_hw_devices [get_hw_devices xc7vx690t_0_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1794.414 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
+INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+der.v:39]
 INFO: [Synth 8-6157] synthesizing module 'rx_gate' [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_gate.v:55]
 	Parameter CAL_OFFSET bound to: 16'sb0000000000000000 
 INFO: [Synth 8-6155] done synthesizing module 'rx_gate' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_gate.v:55]

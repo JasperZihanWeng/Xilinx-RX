@@ -19,6 +19,7 @@ module qwn_raw_rx_top (
     output wire sfp1_tx_disable,
     output wire sfp1_rs0,
     output wire sfp1_rs1,
+    output wire rx_payload_mark_signal,
     output wire [7:0] gpio_led
 );
     wire reset_button = cpu_reset_n; // VC709 SW8 is high while pressed.
@@ -193,6 +194,21 @@ module qwn_raw_rx_top (
         .veto_o(qwn_gate_veto), .gate_ui_o(qwn_gate_ui),
         .armed_o(qwn_gate_armed)
     );
+
+    // Scope-visible copy of the recovered payload-start gate. qwn_gate is
+    // one 156.25-MHz cycle (6.4 ns) wide. Keep its rising edge unchanged and
+    // extend only the high time to ten cycles (~64 ns), making the pulse easy
+    // to trigger on while preserving the timing event being measured.
+    reg [3:0] scope_marker_hold;
+    always @(posedge rxusrclk2) begin
+        if (datapath_reset)
+            scope_marker_hold <= 4'd0;
+        else if (qwn_gate)
+            scope_marker_hold <= 4'd9;
+        else if (scope_marker_hold != 4'd0)
+            scope_marker_hold <= scope_marker_hold - 1'b1;
+    end
+    assign rx_payload_mark_signal = qwn_gate | (scope_marker_hold != 4'd0);
 
     // Physical burst proof. LED5 latches an actual SFP LOS event, LED6
     // latches a later valid header, and LED7 expires unless valid headers

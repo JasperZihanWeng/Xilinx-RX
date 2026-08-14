@@ -41,6 +41,13 @@ set_property PACKAGE_PIN W40  [get_ports sfp1_rs0]
 set_property PACKAGE_PIN Y40  [get_ports sfp1_rs1]
 set_property IOSTANDARD LVCMOS18 [get_ports {sfp1_tx_disable sfp1_tx_fault sfp1_mod_abs sfp1_los sfp1_rs0 sfp1_rs1}]
 
+# Original QWN lane-0 payload marker output on the FMC extension board.
+# N41 is FMC LA02_N and reaches the same SMA used by the earlier experiment.
+set_property PACKAGE_PIN N41 [get_ports rx_payload_mark_signal]
+set_property IOSTANDARD LVCMOS18 [get_ports rx_payload_mark_signal]
+set_property SLEW FAST [get_ports rx_payload_mark_signal]
+set_property DRIVE 16 [get_ports rx_payload_mark_signal]
+
 set_property LOC GTHE2_CHANNEL_X1Y12 [get_cells -hierarchical -filter {REF_NAME == GTHE2_CHANNEL}]
 set_clock_groups -asynchronous \
     -group [get_clocks -include_generated_clocks sysclk_200] \

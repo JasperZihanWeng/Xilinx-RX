@@ -15,6 +15,21 @@ integrity-gated coarse payload-start timer through the laser-off interval.
 GT RXCDRHOLD and the physical OSERDES/ODELAY marker output remain deliberately
 disabled so this build is the no-hold coarse-gate baseline.
 
+## Oscilloscope marker
+
+`rx_payload_mark_signal` exposes the recovered QWN payload-start gate on the
+original extension-board measurement path:
+
+- FPGA package pin: N41
+- FMC signal: LA02_N
+- electrical standard: LVCMOS18, FAST slew, 16 mA drive
+- pulse width: approximately 64 ns (10 cycles at 156.25 MHz)
+- repetition rate: approximately 6.59 kHz for the current burst schedule
+
+The marker's rising edge is the unmodified `qwn_gate` edge. Only its falling
+edge is extended, so the wider pulse is easier to trigger on without changing
+the timing event being measured.
+
 ## Hardware
 
 1. Keep the two short SMA clock cables installed: VC709 J31/J32 to J25/J26.

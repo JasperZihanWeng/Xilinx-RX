@@ -440,3 +440,37 @@ dismissDialog("Program Device"); // aP (dialog9)
 // 'D' command handler elapsed time: 18 seconds
 // Elapsed time: 16 seconds
 dismissDialog("Program Device"); // bq (Program Device Progress)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,403 MB. GUI used memory: 61 MB. Current time: 8/14/26, 1:09:31 PM CDT
+// Elapsed time: 2379 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 24, false); // f (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7vx690t_0_1"); // ao (xc7vx690t_0_1)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl (Dont Echo) Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMoreButton(PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE, (String) null); // r (PAResourceOtoP.ProgramFpgaDialog_SPECIFY_BITSTREAM_FILE)
+setFileChooser("C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx.bit");
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (PAResourceOtoP.ProgramFpgaDialog_PROGRAM, RDIResource.BaseDialog_OK)
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // aP (dialog10)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx.bit} [get_hw_devices xc7vx690t_0_1] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7vx690t_0_1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// Tcl Message: program_hw_devices: Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1794.414 ; gain = 0.000 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'D' command handler elapsed time: 22 seconds
+// Elapsed time: 16 seconds
+dismissDialog("Program Device"); // bq (Program Device Progress)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,403 MB. GUI used memory: 61 MB. Current time: 8/14/26, 1:39:32 PM CDT
