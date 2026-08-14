@@ -11,6 +11,7 @@ module tb_qwn_symbol_decoder;
     wire code_err;
     wire comma_locked;
     wire k285_healthy;
+    wire [2:0] byte_bit_pos;
 
     reg stream [0:255];
     reg [9:0] symbol;
@@ -31,7 +32,7 @@ module tb_qwn_symbol_decoder;
         .recovered_count(recovered_count),
         .byte_o(byte_o), .k_o(k_o), .byte_valid(byte_valid),
         .code_err(code_err), .comma_locked(comma_locked),
-        .k285_healthy(k285_healthy)
+        .k285_healthy(k285_healthy), .byte_bit_pos(byte_bit_pos)
     );
 
     always @(posedge clk) begin

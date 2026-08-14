@@ -3,668 +3,1362 @@
 # SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Wed Jul 22 10:22:50 2026
-# Process ID: 47392
+# Start of session at: Fri Aug 14 12:18:57 2026
+# Process ID: 17880
 # Current directory: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20464 C:\Users\Kumar Lab\Desktop\Jasper\xilinx_rx\xilinx_rx.xpr
+# Command line: vivado.exe -mode batch -source build_qwn_raw_rx.tcl -notrace
 # Log file: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/vivado.log
 # Journal file: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx\vivado.jou
 # Running On: ECE-OP7010PC2, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 34033 MB
 #-----------------------------------------------------------
-start_gui
-open_project {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.xpr}
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
-WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
-Scanning sources...
-Finished scanning sources
+source build_qwn_raw_rx.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 567.004 ; gain = 183.441
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.2/data/ip'.
-open_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1515.328 ; gain = 411.039
-update_compile_order -fileset sources_1
-file mkdir C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new
-file mkdir C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new
-file mkdir C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new
-file mkdir C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new
-file mkdir C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new
-file mkdir C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new
-file mkdir {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new}
-close [ open {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v} w ]
-add_files {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/new/top.v}}
-create_bd_design "design_1"
-Wrote  : <C:\Users\Kumar Lab\Desktop\Jasper\xilinx_rx\xilinx_rx.srcs\sources_1\bd\design_1\design_1.bd> 
-update_compile_order -fileset sources_1
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:ten_gig_eth_pcs_pma:6.0 ten_gig_eth_pcs_pma_0
-endgroup
-undo
-INFO: [Common 17-17] undo 'endgroup'
-INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:ip:ten_gig_eth_pcs_pma:6.0 ten_gig_eth_pcs_pma_0'
-INFO: [Common 17-17] undo 'startgroup'
-startgroup
-create_bd_cell -type ip -vlnv xilinx.com:ip:ten_gig_eth_pcs_pma:6.0 ten_gig_eth_pcs_pma_0
-endgroup
-startgroup
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ten_gig_eth_pcs_pma_0/qplloutclk]
-INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
-create_bd_cell: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2335.164 ; gain = 627.008
-apply_bd_automation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2335.164 ; gain = 627.008
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ten_gig_eth_pcs_pma_0/qplloutrefclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ten_gig_eth_pcs_pma_0/txusrclk]
-apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ten_gig_eth_pcs_pma_0/txusrclk2]
-endgroup
-validate_bd_design
-ERROR: [BD 41-758] The following clock pins are not connected to a valid clock source: 
-/ten_gig_eth_pcs_pma_0/coreclk
-/ten_gig_eth_pcs_pma_0/dclk
-/clk_wiz/clk_in1
-/clk_wiz_1/clk_in1
-/clk_wiz_2/clk_in1
-/clk_wiz_3/clk_in1
-
-ERROR: [Common 17-39] 'validate_bd_design' failed due to earlier errors.
-undo
-INFO: [Common 17-17] undo 'endgroup'
-INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ten_gig_eth_pcs_pma_0/txusrclk2]'
-INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ten_gig_eth_pcs_pma_0/txusrclk]'
-INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ten_gig_eth_pcs_pma_0/qplloutrefclk]'
-INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins ten_gig_eth_pcs_pma_0/qplloutclk]'
-INFO: [Common 17-17] undo 'startgroup'
-undo
-INFO: [Common 17-17] undo 'endgroup'
-INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:ip:ten_gig_eth_pcs_pma:6.0 ten_gig_eth_pcs_pma_0'
-INFO: [Common 17-17] undo 'startgroup'
-export_ip_user_files -of_objects  [get_files {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/bd/design_1/design_1.bd}}] -no_script -reset -force -quiet
-remove_files  {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/bd/design_1/design_1.bd}}
-Wrote  : <C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
-remove_files  {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/bd/design_1/design_1.bd}}
-WARNING: [Vivado 12-818] No files matched 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/bd/design_1/design_1.bd'
-file delete -force {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/bd/design_1/design_1.bd}
-set_property -dict [list \
-  CONFIG.gt0_val_align_comma_enable {1111111111} \
-  CONFIG.gt0_val_align_comma_word {Any_Byte_Boundary} \
-  CONFIG.gt0_val_comma_preset {User_defined} \
-  CONFIG.gt0_val_dec_mcomma_detect {false} \
-  CONFIG.gt0_val_dec_pcomma_detect {false} \
-  CONFIG.gt0_val_decoding {64B/66B} \
-  CONFIG.gt0_val_dfe_mode {DFE-Auto_(no_sliding_TAP)} \
-  CONFIG.gt0_val_encoding {64B/66B_with_Ext_Seq_Ctr} \
-  CONFIG.gt0_val_port_rxcharisk {false} \
-  CONFIG.gt0_val_rx_cm_trim {800} \
-  CONFIG.gt0_val_rx_data_width {64} \
-  CONFIG.gt0_val_rx_int_datawidth {32} \
-  CONFIG.gt0_val_rx_termination_voltage {Programmable} \
-  CONFIG.gt0_val_rxcomma_deten {false} \
-  CONFIG.gt0_val_tx_data_width {64} \
-  CONFIG.gt0_val_tx_int_datawidth {32} \
-] [get_ips gtwizard_0]
-generate_target all [get_files  {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/gtwizard_0/gtwizard_0.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'gtwizard_0'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'gtwizard_0'...
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'gtwizard_0'...
-INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'gtwizard_0'...
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'gtwizard_0'...
-catch { config_ip_cache -export [get_ips -all gtwizard_0] }
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: gtwizard_0
-export_ip_user_files -of_objects [get_files {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/gtwizard_0/gtwizard_0.xci}}] -no_script -sync -force -quiet
-reset_run gtwizard_0_synth_1
-launch_runs gtwizard_0_synth_1 -jobs 16
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: gtwizard_0
-[Wed Jul 22 11:15:31 2026] Launched gtwizard_0_synth_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/gtwizard_0_synth_1/runme.log
-export_simulation -of_objects [get_files {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/gtwizard_0/gtwizard_0.xci}}] -directory {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.ip_user_files} -ipstatic_source_dir {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/modelsim} {questa=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/questa} {riviera=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-create_ip -name ten_gig_eth_pcs_pma -vendor xilinx.com -library ip -version 6.0 -module_name ten_gig_eth_pcs_pma_0
-set_property -dict [list \
-  CONFIG.DClkRate {156.25} \
-  CONFIG.MDIO_Management {false} \
-  CONFIG.SupportLevel {1} \
-  CONFIG.TransceiverControl {false} \
-  CONFIG.base_kr {BASE-R} \
-] [get_ips ten_gig_eth_pcs_pma_0]
-generate_target {instantiation_template} [get_files {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ten_gig_eth_pcs_pma_0'...
-update_compile_order -fileset sources_1
-generate_target all [get_files  {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ten_gig_eth_pcs_pma_0'...
-WARNING: [IP_Flow 19-650] IP license key 'ten_gig_eth_pcs_pma_basekr@2015.04' is enabled with a Design_Linking license.
-WARNING: [IP_Flow 19-650] IP license key 'ten_gig_eth_pcs_pma_basekr@2015.04' is enabled with a Design_Linking license.
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ten_gig_eth_pcs_pma_0'...
-WARNING: [IP_Flow 19-650] IP license key 'ten_gig_eth_pcs_pma_basekr@2015.04' is enabled with a Design_Linking license.
-WARNING: [IP_Flow 19-650] IP license key 'ten_gig_eth_pcs_pma_basekr@2015.04' is enabled with a Design_Linking license.
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ten_gig_eth_pcs_pma_0'...
-catch { config_ip_cache -export [get_ips -all ten_gig_eth_pcs_pma_0] }
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ten_gig_eth_pcs_pma_0
-export_ip_user_files -of_objects [get_files {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci}}] -no_script -sync -force -quiet
-INFO: [Vivado 12-23855] The given sub-design is auto disabled, no action will be taken: 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci'
-export_simulation -of_objects [get_files {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci}}] -directory {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.ip_user_files} -ipstatic_source_dir {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/modelsim} {questa=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/questa} {riviera=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-set_property CONFIG.DClkRate {100} [get_ips ten_gig_eth_pcs_pma_0]
-generate_target all [get_files  {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci}}]
-INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'ten_gig_eth_pcs_pma_0'...
-INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'ten_gig_eth_pcs_pma_0'...
-WARNING: [IP_Flow 19-650] IP license key 'ten_gig_eth_pcs_pma_basekr@2015.04' is enabled with a Design_Linking license.
-WARNING: [IP_Flow 19-650] IP license key 'ten_gig_eth_pcs_pma_basekr@2015.04' is enabled with a Design_Linking license.
-INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'ten_gig_eth_pcs_pma_0'...
-WARNING: [IP_Flow 19-650] IP license key 'ten_gig_eth_pcs_pma_basekr@2015.04' is enabled with a Design_Linking license.
-WARNING: [IP_Flow 19-650] IP license key 'ten_gig_eth_pcs_pma_basekr@2015.04' is enabled with a Design_Linking license.
-INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'ten_gig_eth_pcs_pma_0'...
-catch { config_ip_cache -export [get_ips -all ten_gig_eth_pcs_pma_0] }
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ten_gig_eth_pcs_pma_0
-export_ip_user_files -of_objects [get_files {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci}}] -no_script -sync -force -quiet
-INFO: [Vivado 12-23855] The given sub-design is auto disabled, no action will be taken: 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci'
-export_simulation -of_objects [get_files {{c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci}}] -directory {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.ip_user_files/sim_scripts} -ip_user_files_dir {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.ip_user_files} -ipstatic_source_dir {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.ip_user_files/ipstatic} -lib_map_path [list {modelsim=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/modelsim} {questa=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/questa} {riviera=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/riviera} {activehdl=C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-update_compile_order -fileset sources_1
-launch_runs synth_1 -jobs 16
-INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ten_gig_eth_pcs_pma_0
-INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry d4f24a937f98860c to dir: c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/ip/2023.2/d/4/d4f24a937f98860c/ten_gig_eth_pcs_pma_0.dcp to c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.dcp.
-INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.dcp
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/ip/2023.2/d/4/d4f24a937f98860c/ten_gig_eth_pcs_pma_0_sim_netlist.v to c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0_sim_netlist.v.
-INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0_sim_netlist.v
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/ip/2023.2/d/4/d4f24a937f98860c/ten_gig_eth_pcs_pma_0_sim_netlist.vhdl to c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0_sim_netlist.vhdl.
-INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0_sim_netlist.vhdl
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/ip/2023.2/d/4/d4f24a937f98860c/ten_gig_eth_pcs_pma_0_stub.v to c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0_stub.v.
-INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0_stub.v
-INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.cache/ip/2023.2/d/4/d4f24a937f98860c/ten_gig_eth_pcs_pma_0_stub.vhdl to c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0_stub.vhdl.
-INFO: [IP_Flow 19-6926] IPCACHE: added file to list for BOM: c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.gen/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0_stub.vhdl
-INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP ten_gig_eth_pcs_pma_0, cache-ID = d4f24a937f98860c; cache size = 7.104 MB.
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
+WARNING: [Vivado 12-13650] The IP file 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw.xci' has been moved from its original location, as a result the outputs for this IP will now be generated in 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw'. Alternatively a copy of the IP can be imported into the project using one of the 'import_ip' or 'import_files' commands.
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw.xci' is already up-to-date
 WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
-[Wed Jul 22 12:41:27 2026] Launched synth_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/runme.log
-WARNING: [Common 17-9] Error reading message records.
-WARNING: [Common 17-9] Error reading message records.
-reset_run synth_1
-INFO: [Project 1-1160] Copying file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/top.dcp to C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/utils_1/imports/synth_1 and adding it to utils fileset
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Wed Jul 22 14:06:15 2026] Launched synth_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/runme.log
-[Wed Jul 22 14:06:15 2026] Launched impl_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/runme.log
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Wed Jul 22 14:09:10 2026] Launched impl_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/runme.log
-reset_run impl_1 -prev_step 
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Wed Jul 22 14:09:39 2026] Launched impl_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/runme.log
-add_files -fileset constrs_1 -norecurse {{C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/constrs_1/new/vc709.xdc}}
-reset_run impl_1 -prev_step 
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/top.dcp
-launch_runs impl_1 -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Wed Jul 22 14:14:46 2026] Launched synth_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/runme.log
-[Wed Jul 22 14:14:46 2026] Launched impl_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Wed Jul 22 14:17:10 2026] Launched impl_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/runme.log
-open_run impl_1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 2468.367 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 98 Unisim elements for replacement
+[Fri Aug 14 12:19:08 2026] Launched synth_1...
+Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/synth_1/runme.log
+[Fri Aug 14 12:19:08 2026] Waiting for synth_1 to finish...
+
+*** Running vivado
+    with args -log qwn_raw_rx_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source qwn_raw_rx_top.tcl
+
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source qwn_raw_rx_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 566.695 ; gain = 184.727
+Command: synth_design -top qwn_raw_rx_top -part xc7vx690tffg1761-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2024.06' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1860
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1629.137 ; gain = 439.305
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'qwn_raw_rx_top' [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_raw_rx_top.v:4]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:73646]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:73646]
+INFO: [Synth 8-6157] synthesizing module 'qwn_stable_clock' [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_rx_clocking.v:48]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:82294]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 5.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 5.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: double 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:82294]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:1951]
+INFO: [Synth 8-6155] done synthesizing module 'qwn_stable_clock' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_rx_clocking.v:48]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:93073]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:93073]
+INFO: [Synth 8-6157] synthesizing module 'IBUFDS_GTE2' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:73785]
+INFO: [Synth 8-6155] done synthesizing module 'IBUFDS_GTE2' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:73785]
+INFO: [Synth 8-6157] synthesizing module 'clock_test_common' [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/imports/example_design/support/clock_test_common.v:69]
+	Parameter WRAPPER_SIM_GTRESET_SPEEDUP bound to: TRUE - type: string 
+	Parameter SIM_QPLLREFCLK_SEL bound to: 3'b010 
+INFO: [Synth 8-6157] synthesizing module 'GTHE2_COMMON' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:44076]
+	Parameter BIAS_CFG bound to: 64'b0000000000000000000001000000000000000000000000000001000001010000 
+	Parameter COMMON_CFG bound to: 92 - type: integer 
+	Parameter QPLL_CFG bound to: 27'b000010010000000000111000111 
+	Parameter QPLL_CLKOUT_CFG bound to: 4'b1111 
+	Parameter QPLL_COARSE_FREQ_OVRD bound to: 6'b010000 
+	Parameter QPLL_COARSE_FREQ_OVRD_EN bound to: 1'b0 
+	Parameter QPLL_CP bound to: 10'b0000011111 
+	Parameter QPLL_CP_MONITOR_EN bound to: 1'b0 
+	Parameter QPLL_DMONITOR_SEL bound to: 1'b0 
+	Parameter QPLL_FBDIV bound to: 10'b0011100000 
+	Parameter QPLL_FBDIV_MONITOR_EN bound to: 1'b0 
+	Parameter QPLL_FBDIV_RATIO bound to: 1'b1 
+	Parameter QPLL_INIT_CFG bound to: 24'b000000000000000000000110 
+	Parameter QPLL_LOCK_CFG bound to: 16'b0000010111101000 
+	Parameter QPLL_LPF bound to: 4'b1111 
+	Parameter QPLL_REFCLK_DIV bound to: 1 - type: integer 
+	Parameter QPLL_RP_COMP bound to: 1'b0 
+	Parameter QPLL_VTRL_RESET bound to: 2'b00 
+	Parameter RCAL_CFG bound to: 2'b00 
+	Parameter RSVD_ATTR0 bound to: 16'b0000000000000000 
+	Parameter RSVD_ATTR1 bound to: 16'b0000000000000000 
+	Parameter SIM_QPLLREFCLK_SEL bound to: 3'b010 
+	Parameter SIM_RESET_SPEEDUP bound to: TRUE - type: string 
+	Parameter SIM_VERSION bound to: 2.0 - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'GTHE2_COMMON' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:44076]
+INFO: [Synth 8-6155] done synthesizing module 'clock_test_common' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/imports/example_design/support/clock_test_common.v:69]
+INFO: [Synth 8-6157] synthesizing module 'qwn_rx_clocking' [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_rx_clocking.v:7]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_BASE__parameterized0' [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:82294]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 2.000000 - type: double 
+	Parameter CLKIN1_PERIOD bound to: 3.200000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 2.000000 - type: double 
+	Parameter CLKOUT1_DIVIDE bound to: 4 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_BASE__parameterized0' (0#1) [C:/Xilinx/Vivado/2023.2/scripts/rt/data/unisim_comp.v:82294]
+INFO: [Synth 8-6155] done synthesizing module 'qwn_rx_clocking' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_rx_clocking.v:7]
+INFO: [Synth 8-6157] synthesizing module 'qwn_gt_raw' [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/synth_1/.Xil/Vivado-12928-ECE-OP7010PC2/realtime/qwn_gt_raw_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'qwn_gt_raw' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/synth_1/.Xil/Vivado-12928-ECE-OP7010PC2/realtime/qwn_gt_raw_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rx_oversample_cdr_64' [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_oversample_cdr_64.v:84]
+	Parameter OS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rx_oversample_cdr_64' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_oversample_cdr_64.v:84]
+INFO: [Synth 8-6157] synthesizing module 'qwn_symbol_decoder' [C:/Users/Kumar Lab/Desktop/Jaspset_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
+set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx.bit} [get_hw_devices xc7vx690t_0_1]
+program_hw_devices [get_hw_devices xc7vx690t_0_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 1794.414 ; gain = 0.000
+refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
+INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ynth 8-589] replacing case/wildcard equality operator !== with logical equality operator != [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_header.v:116]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_header.v:126]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_header.v:101]
+INFO: [Synth 8-6155] done synthesizing module 'rx_header' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_header.v:39]
+INFO: [Synth 8-6157] synthesizing module 'rx_gate' [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_gate.v:55]
+	Parameter CAL_OFFSET bound to: 16'sb0000000000000000 
+INFO: [Synth 8-6155] done synthesizing module 'rx_gate' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_gate.v:55]
+INFO: [Synth 8-6157] synthesizing module 'qwn_burst_diagnostics' [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_burst_diagnostics.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'qwn_burst_diagnostics' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_burst_diagnostics.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'qwn_raw_rx_top' (0#1) [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_raw_rx_top.v:4]
+WARNING: [Synth 8-3936] Found unconnected internal register 'km_reg' and it is trimmed from '7' to '3' bits. [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_oversample_cdr_64.v:166]
+WARNING: [Synth 8-6014] Unused sequential element eph_r_reg was removed.  [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_oversample_cdr_64.v:194]
+WARNING: [Synth 8-6014] Unused sequential element v_sr_reg was removed.  [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_symbol_decoder.v:87]
+WARNING: [Synth 8-6014] Unused sequential element v_countdown_reg was removed.  [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_symbol_decoder.v:88]
+WARNING: [Synth 8-6014] Unused sequential element v_locked_reg was removed.  [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_symbol_decoder.v:89]
+WARNING: [Synth 8-6014] Unused sequential element symbol_hit_reg was removed.  [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_symbol_decoder.v:90]
+WARNING: [Synth 8-6014] Unused sequential element normalized_symbol_reg was removed.  [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_symbol_decoder.v:91]
+WARNING: [Synth 8-6014] Unused sequential element normalized_symbol_pos_reg was removed.  [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_symbol_decoder.v:92]
+WARNING: [Synth 8-6014] Unused sequential element v_next_sr_reg was removed.  [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_symbol_decoder.v:99]
+WARNING: [Synth 8-6014] Unused sequential element reversed_k_match_reg was removed.  [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/source/qwn_symbol_decoder.v:100]
+WARNING: [Synth 8-6014] Unused sequential element prev_comma_reg was removed.  [C:/Users/Kumar Lab/Desktop/Jasper/CPCC_QWN/clock_test_ex.srcs/sources_1/new/rx_header.v:92]
+WARNING: [Synth 8-3917] design qwn_raw_rx_top has port sfp1_tx_disable driven by constant 1
+WARNING: [Synth 8-3917] design qwn_raw_rx_top has port sfp1_rs0 driven by constant 1
+WARNING: [Synth 8-3917] design qwn_raw_rx_top has port sfp1_rs1 driven by constant 0
+WARNING: [Synth 8-7129] Port bv in module rx_gate is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sfp1_tx_fault in module qwn_raw_rx_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1789.391 ; gain = 599.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1789.391 ; gain = 599.559
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1789.391 ; gain = 599.559
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1789.391 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw/qwn_gt_raw_in_context.xdc] for cell 'raw_gt_i'
+Finished Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw/qwn_gt_raw_in_context.xdc] for cell 'raw_gt_i'
+Parsing XDC File [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc:45]
+Finished Parsing XDC File [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/qwn_raw_rx_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/qwn_raw_rx_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1904.273 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 2 instances
+  OBUFDS => OBUFDS: 1 instance 
+
+Access is denied.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1904.273 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1904.273 ; gain = 714.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx690tffg1761-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1904.273 ; gain = 714.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for raw_gt_i. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1904.273 ; gain = 714.441
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'st_reg' in module 'rx_header'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                   S_SOH |                               01 |                               01
+                     S_F |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'st_reg' using encoding 'sequential' in module 'rx_header'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:17 . Memory (MB): peak = 1904.273 ; gain = 714.441
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
+	  19 Input    7 Bit       Adders := 6     
+	   3 Input    7 Bit       Adders := 71    
+	  18 Input    7 Bit       Adders := 5     
+	  24 Input    7 Bit       Adders := 1     
+	  23 Input    7 Bit       Adders := 1     
+	  22 Input    7 Bit       Adders := 1     
+	  21 Input    7 Bit       Adders := 1     
+	  20 Input    7 Bit       Adders := 1     
+	  13 Input    7 Bit       Adders := 1     
+	  12 Input    7 Bit       Adders := 1     
+	  11 Input    7 Bit       Adders := 1     
+	  10 Input    7 Bit       Adders := 1     
+	   9 Input    7 Bit       Adders := 1     
+	   8 Input    7 Bit       Adders := 1     
+	   7 Input    7 Bit       Adders := 1     
+	   6 Input    7 Bit       Adders := 1     
+	   5 Input    7 Bit       Adders := 1     
+	   4 Input    7 Bit       Adders := 1     
+	  12 Input    6 Bit       Adders := 1     
+	  11 Input    6 Bit       Adders := 1     
+	  10 Input    6 Bit       Adders := 1     
+	   9 Input    6 Bit       Adders := 1     
+	   8 Input    6 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 6     
+	   7 Input    6 Bit       Adders := 1     
+	   6 Input    6 Bit       Adders := 1     
+	   5 Input    6 Bit       Adders := 1     
+	   4 Input    6 Bit       Adders := 1     
+	   3 Input    6 Bit       Adders := 1     
+	  12 Input    5 Bit       Adders := 4     
+	  14 Input    5 Bit       Adders := 6     
+	  11 Input    5 Bit       Adders := 7     
+	  13 Input    5 Bit       Adders := 4     
+	  10 Input    5 Bit       Adders := 5     
+	   8 Input    5 Bit       Adders := 6     
+	   6 Input    5 Bit       Adders := 2     
+	   9 Input    5 Bit       Adders := 2     
+	  16 Input    5 Bit       Adders := 3     
+	   7 Input    5 Bit       Adders := 1     
+	   6 Input    4 Bit       Adders := 1     
+	   5 Input    4 Bit       Adders := 1     
+	   4 Input    4 Bit       Adders := 1     
+	   3 Input    4 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 10    
+	   2 Input    3 Bit       Adders := 62    
+	   3 Input    3 Bit       Adders := 9     
+	   4 Input    3 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 6     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 64    
++---Registers : 
+	               64 Bit    Registers := 4     
+	               24 Bit    Registers := 2     
+	               16 Bit    Registers := 4     
+	               10 Bit    Registers := 3     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 33    
+	                6 Bit    Registers := 16    
+	                5 Bit    Registers := 8     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 13    
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 21    
++---Muxes : 
+	   9 Input   24 Bit        Muxes := 1     
+	   3 Input   24 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 3     
+	   9 Input   16 Bit        Muxes := 1     
+	   3 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 39    
+	   2 Input    8 Bit        Muxes := 66    
+	   3 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 191   
+	   3 Input    6 Bit        Muxes := 58    
+	   4 Input    6 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 83    
+	   3 Input    5 Bit        Muxes := 30    
+	   2 Input    4 Bit        Muxes := 120   
+	   3 Input    4 Bit        Muxes := 14    
+	   2 Input    3 Bit        Muxes := 175   
+	   3 Input    3 Bit        Muxes := 7     
+	   3 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 11    
+	   2 Input    1 Bit        Muxes := 670   
+	 425 Input    1 Bit        Muxes := 2     
+	   9 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 4     
+	   3 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 3600 (col length:200)
+BRAMs: 2940 (col length: RAMB18 200 RAMB36 100)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design qwn_raw_rx_top has port sfp1_tx_disable driven by constant 1
+WARNING: [Synth 8-3917] design qwn_raw_rx_top has port sfp1_rs0 driven by constant 1
+WARNING: [Synth 8-3917] design qwn_raw_rx_top has port sfp1_rs1 driven by constant 0
+WARNING: [Synth 8-7129] Port bv in module rx_gate is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sfp1_tx_fault in module qwn_raw_rx_top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:54 . Memory (MB): peak = 2037.629 ; gain = 847.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-------------------+-----------------------+---------------+----------------+
+|Module Name        | RTL Object            | Depth x Width | Implemented As | 
++-------------------+-----------------------+---------------+----------------+
+|dec_8b10b          | dout                  | 1024x8        | LUT            | 
+|qwn_symbol_decoder | decoder_input_reg_rep | 1024x8        | Block RAM      | 
++-------------------+-----------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:58 . Memory (MB): peak = 2037.629 ; gain = 847.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:01:09 . Memory (MB): peak = 2037.629 ; gain = 847.797
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:01:11 . Memory (MB): peak = 2099.617 ; gain = 909.785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:01:14 . Memory (MB): peak = 2113.422 ; gain = 923.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:01:14 . Memory (MB): peak = 2113.422 ; gain = 923.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:01:14 . Memory (MB): peak = 2113.422 ; gain = 923.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:01:14 . Memory (MB): peak = 2113.422 ; gain = 923.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:01:14 . Memory (MB): peak = 2113.422 ; gain = 923.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:01:14 . Memory (MB): peak = 2113.422 ; gain = 923.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |qwn_gt_raw    |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |qwn_gt_raw   |     1|
+|2     |BUFG         |     5|
+|3     |CARRY4       |    42|
+|4     |GTHE2_COMMON |     1|
+|5     |IBUFDS_GTE2  |     1|
+|6     |LUT1         |    45|
+|7     |LUT2         |   279|
+|8     |LUT3         |   504|
+|9     |LUT4         |   322|
+|10    |LUT5         |   939|
+|11    |LUT6         |  1649|
+|12    |MMCME2_BASE  |     2|
+|13    |RAMB18E1     |     1|
+|14    |FDRE         |   802|
+|15    |IBUF         |     7|
+|16    |IBUFDS       |     2|
+|17    |OBUF         |    11|
+|18    |OBUFDS       |     1|
++------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:01:14 . Memory (MB): peak = 2113.422 ; gain = 923.590
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:01:11 . Memory (MB): peak = 2113.422 ; gain = 808.707
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:01:14 . Memory (MB): peak = 2113.422 ; gain = 923.590
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2113.422 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 48 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'qwn_raw_rx_top' is not ideal for floorplanning, since the cellview 'rx_oversample_cdr_64' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2140.355 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  MMCME2_BASE => MMCME2_ADV: 2 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+
+Access is denied.
+Synth Design complete | Checksum: 92276f20
+INFO: [Common 17-83] Releasing license: Synthesis
+59 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:01:22 . Memory (MB): peak = 2140.355 ; gain = 1558.172
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2140.355 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/synth_1/qwn_raw_rx_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file qwn_raw_rx_top_utilization_synth.rpt -pb qwn_raw_rx_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 14 12:20:40 2026...
+[Fri Aug 14 12:20:43 2026] synth_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:01:35 . Memory (MB): peak = 581.332 ; gain = 0.000
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7vx690tffg1761-2
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw.dcp' for cell 'raw_gt_i'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1208.250 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'qwn_raw_rx_top' is not ideal for floorplanning, since the cellview 'rx_oversample_cdr_64' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-479] Netlist was created with Vivado 2023.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 2533.957 ; gain = 1.719
+Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw.xdc] for cell 'raw_gt_i/inst'
+Finished Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw.xdc] for cell 'raw_gt_i/inst'
+Parsing XDC File [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc:45]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc:45]
+get_clocks: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 2152.148 ; gain = 801.469
+Finished Parsing XDC File [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2152.148 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  OBUFDS => OBUFDS: 1 instance 
+
+open_run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 2152.148 ; gain = 1570.816
+Command: report_drc -file {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_synth_drc.rpt}
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_synth_drc.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw.xci' is already up-to-date
+[Fri Aug 14 12:21:02 2026] Launched impl_1...
+Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/impl_1/runme.log
+[Fri Aug 14 12:21:02 2026] Waiting for impl_1 to finish...
+
+*** Running vivado
+    with args -log qwn_raw_rx_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source qwn_raw_rx_top.tcl -notrace
+
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source qwn_raw_rx_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 566.262 ; gain = 180.398
+Command: link_design -top qwn_raw_rx_top -part xc7vx690tffg1761-2
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7vx690tffg1761-2
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw.dcp' for cell 'raw_gt_i'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1209.137 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'qwn_raw_rx_top' is not ideal for floorplanning, since the cellview 'rx_oversample_cdr_64' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw.xdc] for cell 'raw_gt_i/inst'
+Finished Parsing XDC File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw.xdc] for cell 'raw_gt_i/inst'
+Parsing XDC File [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc]
+INFO: [Timing 38-35] Done setting XDC timing constraints. [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc:45]
+INFO: [Timing 38-2] Deriving generated clocks [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc:45]
+get_clocks: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 2155.543 ; gain = 803.754
+Finished Parsing XDC File [C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/constraints/qwn_raw_rx_vc709.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2155.543 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 1 instances were transformed.
+  OBUFDS => OBUFDS: 1 instance 
+
+Access is denied.
+10 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 2155.543 ; gain = 1572.742
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2024.06' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+Parsing TCL File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/tcl/v7ht.tcl] from IP C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/qwn_gt_raw.xci
+Sourcing Tcl File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/tcl/v7ht.tcl]
+
+****************************************************************************************
+*  WARNING: This script only supports the xc7vh290t, xc7vh580t and xc7vh870t devices.  *
+*           Your current part is xc7vx690t.                                            *
+****************************************************************************************
+
+Finished Sourcing Tcl File [c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/ip/qwn_gt_raw/tcl/v7ht.tcl]
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.737 . Memory (MB): peak = 2155.543 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: e3224b43
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.080 . Memory (MB): peak = 2175.879 ; gain = 20.336
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: e3224b43
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2544.668 ; gain = 0.000
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: e3224b43
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2544.668 ; gain = 0.000
+Phase 1 Initialization | Checksum: e3224b43
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2544.668 ; gain = 0.000
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Timer Update
+Phase 2.1 Timer Update | Checksum: e3224b43
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 2544.668 ; gain = 0.000
+
+Phase 2.2 Timing Data Collection
+Phase 2.2 Timing Data Collection | Checksum: e3224b43
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 2544.668 ; gain = 0.000
+Phase 2 Timer Update And Timing Data Collection | Checksum: e3224b43
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 2544.668 ; gain = 0.000
+
+Phase 3 Retarget
+INFO: [Opt 31-1566] Pulled 11 inverters resulting in an inversion of 51 pins
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 1985e06a6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 2544.668 ; gain = 0.000
+Retarget | Checksum: 1985e06a6
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 11 cells
+INFO: [Opt 31-1021] In phase Retarget, 2 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 4 Constant propagation | Checksum: d5122e6c
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.129 . Memory (MB): peak = 2544.668 ; gain = 0.000
+Constant propagation | Checksum: d5122e6c
+INFO: [Opt 31-389] Phase Constant propagation created 4 cells and removed 5 cells
+
+Phase 5 Sweep
+Phase 5 Sweep | Checksum: ffdbe65e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.152 . Memory (MB): peak = 2544.668 ; gain = 0.000
+Sweep | Checksum: ffdbe65e
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 4 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: ffdbe65e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.187 . Memory (MB): peak = 2544.668 ; gain = 0.000
+BUFG optimization | Checksum: ffdbe65e
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: ffdbe65e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.190 . Memory (MB): peak = 2544.668 ; gain = 0.000
+Shift Register Optimization | Checksum: ffdbe65e
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+Phase 8 Post Processing Netlist | Checksum: ffdbe65e
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.196 . Memory (MB): peak = 2544.668 ; gain = 0.000
+Post Processing Netlist | Checksum: ffdbe65e
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 1587ad695
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.226 . Memory (MB): peak = 2544.668 ; gain = 0.000
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2544.668 ; gain = 0.000
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 1587ad695
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.231 . Memory (MB): peak = 2544.668 ; gain = 0.000
+Phase 9 Finalization | Checksum: 1587ad695
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.232 . Memory (MB): peak = 2544.668 ; gain = 0.000
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |              11  |                                              2  |
+|  Constant propagation         |               4  |               5  |                                              0  |
+|  Sweep                        |               0  |               4  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 1587ad695
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.233 . Memory (MB): peak = 2544.668 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2544.668 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 1 newly gated: 0 Total Ports: 2
+Number of Flops added for Enable Generation: 2
+
+Ending PowerOpt Patch Enables Task | Checksum: 1928eb774
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 1928eb774
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.793 . Memory (MB): peak = 2622.676 ; gain = 78.008
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 1d717c1a5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.191 . Memory (MB): peak = 2622.676 ; gain = 0.000
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 1d717c1a5
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2622.676 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1d717c1a5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2622.676 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+38 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 2622.676 ; gain = 467.133
+INFO: [runtcl-4] Executing : report_drc -file qwn_raw_rx_top_drc_opted.rpt -pb qwn_raw_rx_top_drc_opted.pb -rpx qwn_raw_rx_top_drc_opted.rpx
+Command: report_drc -file qwn_raw_rx_top_drc_opted.rpt -pb qwn_raw_rx_top_drc_opted.pb -rpx qwn_raw_rx_top_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/impl_1/qwn_raw_rx_top_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 2622.676 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/impl_1/qwn_raw_rx_top_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2024.06' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+INFO: [Common 17-83] Releasing license: Implementation
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 135c50c17
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2622.676 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: abae0ecf
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.755 . Memory (MB): peak = 2622.676 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 1985c85cb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 2622.676 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 1985c85cb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 2622.676 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 1985c85cb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:01 . Memory (MB): peak = 2622.676 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 18a0fd2e4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2622.676 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 19ae60839
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2622.676 ; gain = 0.000
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 19ae60839
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 2622.676 ; gain = 0.000
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 1f3a87c70
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2651.383 ; gain = 28.707
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 9 LUTNM shape to break, 36 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 5, two critical 4, total 9, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 23 nets or LUTs. Breaked 9 LUTs, combined 14 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1401] No candidate cells found for Shift Register optimization.
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2651.383 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            9  |             14  |                    23  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            9  |             14  |                    23  |           0  |           9  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 2c29e74f1
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2651.383 ; gain = 28.707
+Phase 2.4 Global Placement Core | Checksum: 22b49df46
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2651.383 ; gain = 28.707
+Phase 2 Global Placement | Checksum: 22b49df46
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2651.383 ; gain = 28.707
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 244e02a58
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2651.383 ; gain = 28.707
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1928d558b
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2651.383 ; gain = 28.707
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 21fa5eaf4
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2651.383 ; gain = 28.707
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1cd0f5125
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2651.383 ; gain = 28.707
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 1cd202b2b
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:09 . Memory (MB): peak = 2651.383 ; gain = 28.707
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 186f1d783
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2651.383 ; gain = 28.707
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1fe72e266
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2651.383 ; gain = 28.707
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 24c3c57ba
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2651.383 ; gain = 28.707
+Phase 3 Detail Placement | Checksum: 24c3c57ba
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 2651.383 ; gain = 28.707
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 11bc5467b
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.934 | TNS=-12.925 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1ae75834d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.102 . Memory (MB): peak = 2707.664 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1ae75834d
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.121 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 11bc5467b
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 2707.664 ; gain = 84.988
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.507. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: d7a17d01
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2707.664 ; gain = 84.988
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2707.664 ; gain = 84.988
+Phase 4.1 Post Commit Optimization | Checksum: d7a17d01
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2707.664 ; gain = 84.988
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: d7a17d01
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2707.664 ; gain = 84.988
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                2x2|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: d7a17d01
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2707.664 ; gain = 84.988
+Phase 4.3 Placer Reporting | Checksum: d7a17d01
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2707.664 ; gain = 84.988
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2707.664 ; gain = 0.000
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2707.664 ; gain = 84.988
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 13f1a7a5e
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2707.664 ; gain = 84.988
+Ending Placer Task | Checksum: 133f25983
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 2707.664 ; gain = 84.988
+82 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 2707.664 ; gain = 84.988
+INFO: [runtcl-4] Executing : report_io -file qwn_raw_rx_top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.145 . Memory (MB): peak = 2707.664 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file qwn_raw_rx_top_utilization_placed.rpt -pb qwn_raw_rx_top_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file qwn_raw_rx_top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2707.664 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.169 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.232 . Memory (MB): peak = 2707.664 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/impl_1/qwn_raw_rx_top_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2024.06' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.336 . Memory (MB): peak = 2707.664 ; gain = 0.000
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+92 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.173 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2707.664 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.238 . Memory (MB): peak = 2707.664 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/impl_1/qwn_raw_rx_top_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2024.06' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: ae74460b ConstDB: 0 ShapeSum: 857e1378 RouteDB: 0
+Post Restoration Checksum: NetGraph: ba5de3ab | NumContArr: 9e4c61c2 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 2ddfc3aa7
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 3181.676 ; gain = 474.012
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 2ddfc3aa7
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 3181.676 ; gain = 474.012
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 2ddfc3aa7
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 3181.676 ; gain = 474.012
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 29af5be01
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 3697.191 ; gain = 989.527
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.476  | TNS=0.000  | WHS=-0.243 | THS=-26.664|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 4546
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 4546
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 239ba0891
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 239ba0891
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+
+Phase 3.2 Initial Net Routing
+Phase 3.2 Initial Net Routing | Checksum: 1dd875c5f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+Phase 3 Initial Routing | Checksum: 1dd875c5f
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 2255
+ Number of Nodes with overlaps = 975
+ Number of Nodes with overlaps = 479
+ Number of Nodes with overlaps = 189
+ Number of Nodes with overlaps = 81
+ Number of Nodes with overlaps = 45
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.273  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 2b0973b5b
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+Phase 4 Rip-up And Reroute | Checksum: 2b0973b5b
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 2b0973b5b
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 2b0973b5b
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+Phase 5 Delay and Skew Optimization | Checksum: 2b0973b5b
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 27a988a95
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.362  | TNS=0.000  | WHS=0.095  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 27a988a95
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+Phase 6 Post Hold Fix | Checksum: 27a988a95
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.122736 %
+  Global Horizontal Routing Utilization  = 0.171516 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 27a988a95
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 27a988a95
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 293978a7a
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:40 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.362  | TNS=0.000  | WHS=0.095  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 293978a7a
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+INFO: [Route 35-16] Router Completed Successfully
+
+Phase 11 Post-Route Event Processing
+Phase 11 Post-Route Event Processing | Checksum: 16f937c97
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+Ending Routing Task | Checksum: 16f937c97
+
+Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+107 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 3757.348 ; gain = 1049.684
+INFO: [runtcl-4] Executing : report_drc -file qwn_raw_rx_top_drc_routed.rpt -pb qwn_raw_rx_top_drc_routed.pb -rpx qwn_raw_rx_top_drc_routed.rpx
+Command: report_drc -file qwn_raw_rx_top_drc_routed.rpt -pb qwn_raw_rx_top_drc_routed.pb -rpx qwn_raw_rx_top_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/impl_1/qwn_raw_rx_top_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file qwn_raw_rx_top_methodology_drc_routed.rpt -pb qwn_raw_rx_top_methodology_drc_routed.pb -rpx qwn_raw_rx_top_methodology_drc_routed.rpx
+Command: report_methodology -file qwn_raw_rx_top_methodology_drc_routed.rpt -pb qwn_raw_rx_top_methodology_drc_routed.pb -rpx qwn_raw_rx_top_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/impl_1/qwn_raw_rx_top_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file qwn_raw_rx_top_power_routed.rpt -pb qwn_raw_rx_top_power_summary_routed.pb -rpx qwn_raw_rx_top_power_routed.rpx
+Command: report_power -file qwn_raw_rx_top_power_routed.rpt -pb qwn_raw_rx_top_power_summary_routed.pb -rpx qwn_raw_rx_top_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+117 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file qwn_raw_rx_top_route_status.rpt -pb qwn_raw_rx_top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file qwn_raw_rx_top_timing_summary_routed.rpt -pb qwn_raw_rx_top_timing_summary_routed.pb -rpx qwn_raw_rx_top_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file qwn_raw_rx_top_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file qwn_raw_rx_top_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file qwn_raw_rx_top_bus_skew_routed.rpt -pb qwn_raw_rx_top_bus_skew_routed.pb -rpx qwn_raw_rx_top_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3757.348 ; gain = 0.000
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.168 . Memory (MB): peak = 3757.348 ; gain = 0.000
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3757.348 ; gain = 0.000
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.064 . Memory (MB): peak = 3757.348 ; gain = 0.000
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 3757.348 ; gain = 0.000
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 3757.348 ; gain = 0.000
+Write Physdb Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.264 . Memory (MB): peak = 3757.348 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_build/qwn_raw_rx.runs/impl_1/qwn_raw_rx_top_routed.dcp' has been generated.
+Command: write_bitstream -force qwn_raw_rx_top.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2024.06' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./qwn_raw_rx_top.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+14 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 3907.582 ; gain = 150.234
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 14 12:23:20 2026...
+[Fri Aug 14 12:23:23 2026] impl_1 finished
+wait_on_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:02:21 . Memory (MB): peak = 2152.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 2152.148 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'qwn_raw_rx_top' is not ideal for floorplanning, since the cellview 'rx_oversample_cdr_64' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2152.148 ; gain = 0.000
 INFO: [Timing 38-478] Restoring timing data from binary archive.
 INFO: [Timing 38-479] Binary timing data restore complete.
 INFO: [Project 1-856] Restoring constraints from binary archive.
 INFO: [Project 1-853] Binary constraint restore complete.
 INFO: [Designutils 20-5722] Start Reading Physical Databases.
 Reading placement.
-Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3369.387 ; gain = 0.000
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2186.473 ; gain = 0.000
 Reading placer database...
-Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 3369.387 ; gain = 0.000
-Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 3369.387 ; gain = 0.000
-Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3369.387 ; gain = 0.000
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 2186.473 ; gain = 0.000
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 2186.473 ; gain = 0.000
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2186.473 ; gain = 0.000
 Reading routing.
-Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.075 . Memory (MB): peak = 3369.387 ; gain = 0.000
-Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.196 . Memory (MB): peak = 3369.387 ; gain = 0.000
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 2186.473 ; gain = 0.000
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.204 . Memory (MB): peak = 2186.473 ; gain = 0.000
 Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.196 . Memory (MB): peak = 3369.387 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3369.387 ; gain = 0.000
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.204 . Memory (MB): peak = 2186.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2186.473 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 25 instances were transformed.
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 23 instances
-  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+No Unisim elements were transformed.
 
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-ECHO is off.
-ECHO is off.
-
-****** Xilinx hw_server v2023.2
-  **** Build date : Oct 13 2023 at 21:31:40
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-ECHO is off.
-ECHO is off.
-
-
-******** Xilinx cs_server v2023.2.0
-  ****** Build date   : Oct 09 2023-23:01:56
-    **** Build number : 2023.2.1696910516
-      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
-      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203B707C6A
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0]
-current_hw_device [get_hw_devices xc7vx690t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx690t_0] 0]
-INFO: [Labtools 27-2302] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
-INFO: [Labtools 27-2302] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
-close_hw_target {localhost:3121/xilinx_tcf/Digilent/210203B707C6A}
-INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210203B707C6A
-open_hw_target {localhost:3121/xilinx_tcf/Digilent/210203B32C16A}
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203B32C16A
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-current_hw_device [get_hw_devices xc7vx690t_0_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-2302] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
-INFO: [Labtools 27-2302] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
-refresh_hw_target {localhost:3121/xilinx_tcf/Digilent/210203B32C16A}
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-WARNING: [Common 17-9] Error reading message records.
-WARNING: [Common 17-9] Error reading message records.
-WARNING: [Common 17-9] Error reading message records.
-WARNING: [Common 17-9] Error reading message records.
-WARNING: [Common 17-9] Error reading message records.
-WARNING: [Common 17-9] Error reading message records.
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_hw_manager
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-ECHO is off.
-ECHO is off.
-
-****** Xilinx hw_server v2023.2
-  **** Build date : Oct 13 2023 at 21:31:40
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-ECHO is off.
-ECHO is off.
-
-
-******** Xilinx cs_server v2023.2.0
-  ****** Build date   : Oct 09 2023-23:01:56
-    **** Build number : 2023.2.1696910516
-      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
-      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203B707C6A
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0]
-current_hw_device [get_hw_devices xc7vx690t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx690t_0] 0]
-INFO: [Labtools 27-2302] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
-INFO: [Labtools 27-2302] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
-close_hw_target {localhost:3121/xilinx_tcf/Digilent/210203B707C6A}
-INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210203B707C6A
-open_hw_target {localhost:3121/xilinx_tcf/Digilent/210203B32C16A}
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203B32C16A
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-current_hw_device [get_hw_devices xc7vx690t_0_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/top.dcp
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1
-
-launch_runs impl_1 -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Wed Jul 22 15:56:25 2026] Launched synth_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/runme.log
-[Wed Jul 22 15:56:25 2026] Launched impl_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1
-
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Wed Jul 22 16:25:39 2026] Launched synth_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/runme.log
-[Wed Jul 22 16:25:39 2026] Launched impl_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/runme.log
-close_hw_manager
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1
-
-launch_runs synth_1 -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Wed Jul 22 16:25:53 2026] Launched synth_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/runme.log
-close_design
-reset_run synth_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1
-
-launch_runs synth_1 -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Wed Jul 22 16:26:14 2026] Launched synth_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Wed Jul 22 16:27:08 2026] Launched impl_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/runme.log
-open_run impl_1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.053 . Memory (MB): peak = 3883.352 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 112 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2023.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 3883.352 ; gain = 0.000
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-INFO: [Designutils 20-5722] Start Reading Physical Databases.
-Reading placement.
-Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3883.352 ; gain = 0.000
-Reading placer database...
-Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 3883.352 ; gain = 0.000
-Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 3883.352 ; gain = 0.000
-Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3883.352 ; gain = 0.000
-Reading routing.
-Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 3883.352 ; gain = 0.000
-Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.216 . Memory (MB): peak = 3883.352 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.217 . Memory (MB): peak = 3883.352 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 3883.352 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 25 instances were transformed.
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 23 instances
-  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
-
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Wed Jul 22 16:29:21 2026] Launched impl_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/runme.log
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-ECHO is off.
-ECHO is off.
-
-****** Xilinx hw_server v2023.2
-  **** Build date : Oct 13 2023 at 21:31:40
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-ECHO is off.
-ECHO is off.
-
-
-******** Xilinx cs_server v2023.2.0
-  ****** Build date   : Oct 09 2023-23:01:56
-    **** Build number : 2023.2.1696910516
-      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
-      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203B707C6A
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0]
-current_hw_device [get_hw_devices xc7vx690t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx690t_0] 0]
-INFO: [Labtools 27-2302] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
-INFO: [Labtools 27-2302] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
-close_hw_target {localhost:3121/xilinx_tcf/Digilent/210203B707C6A}
-INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210203B707C6A
-open_hw_target {localhost:3121/xilinx_tcf/Digilent/210203B32C16A}
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203B32C16A
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-current_hw_device [get_hw_devices xc7vx690t_0_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-close_hw_manager
-open_hw_manager
-connect_hw_server -allow_non_jtag
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
-ECHO is off.
-ECHO is off.
-
-****** Xilinx hw_server v2023.2
-  **** Build date : Oct 13 2023 at 21:31:40
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
-
-INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
-INFO: [Labtools 27-3417] Launching cs_server...
-INFO: [Labtools 27-2221] Launch Output:
-ECHO is off.
-ECHO is off.
-
-
-******** Xilinx cs_server v2023.2.0
-  ****** Build date   : Oct 09 2023-23:01:56
-    **** Build number : 2023.2.1696910516
-      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
-      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
-
-
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203B707C6A
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0]
-current_hw_device [get_hw_devices xc7vx690t_0]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx690t_0] 0]
-INFO: [Labtools 27-2302] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
-INFO: [Labtools 27-2302] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
-close_hw_target {localhost:3121/xilinx_tcf/Digilent/210203B707C6A}
-INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210203B707C6A
-open_hw_target {localhost:3121/xilinx_tcf/Digilent/210203B32C16A}
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210203B32C16A
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-current_hw_device [get_hw_devices xc7vx690t_0_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1435] Device xc7vx690t (JTAG device index = 0) is not programmed (DONE status = 0).
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: report_drc -file {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_drc.rpt}
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx_drc.rpt.
+report_drc completed successfully
+Command: write_bitstream -force {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx.bit}
+Attempting to get a license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7vx690t'
+INFO: [Common 17-1540] The version limit for your license is '2024.06' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+Running DRC as a precondition to command write_bitstream
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-INFO: [IP_Flow 19-1839] IP Catalog is up to date.
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/top.dcp
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1
-
-launch_runs impl_1 -to_step write_bitstream -jobs 16
-INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'c:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.srcs/sources_1/ip/ten_gig_eth_pcs_pma_0/ten_gig_eth_pcs_pma_0.xci' is already up-to-date
-[Thu Jul 23 12:44:49 2026] Launched synth_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/synth_1/runme.log
-[Thu Jul 23 12:44:49 2026] Launched impl_1...
-Run output will be captured here: C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/runme.log
-set_property PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7vx690t_0_1]
-set_property PROGRAM.FILE {C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/xilinx_rx.runs/impl_1/top.bit} [get_hw_devices xc7vx690t_0_1]
-program_hw_devices [get_hw_devices xc7vx690t_0_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7vx690t_0_1] 0]
-INFO: [Labtools 27-1434] Device xc7vx690t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
-ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210203B32C16A
-exit
-INFO: [Common 17-206] Exiting Vivado at Thu Jul 23 13:31:25 2026...
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream C:/Users/Kumar Lab/Desktop/Jasper/xilinx_rx/qwn_raw_rx.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+42 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 3100.094 ; gain = 831.680
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 14 12:23:54 2026...

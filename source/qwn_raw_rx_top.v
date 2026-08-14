@@ -136,6 +136,7 @@ module qwn_raw_rx_top (
     wire decoded_k;
     wire decoded_valid;
     wire decoded_error;
+    wire [2:0] decoded_bit_pos;
     wire comma_locked;
     wire k285_healthy;
     qwn_symbol_decoder symbol_decoder_i (
@@ -143,7 +144,71 @@ module qwn_raw_rx_top (
         .recovered_bits(recovered_bits), .recovered_count(recovered_count),
         .byte_o(decoded_byte), .k_o(decoded_k),
         .byte_valid(decoded_valid), .code_err(decoded_error),
-        .comma_locked(comma_locked), .k285_healthy(k285_healthy)
+        .comma_locked(comma_locked), .k285_healthy(k285_healthy),
+        .byte_bit_pos(decoded_bit_pos)
+    );
+
+    // Original QWN header parser: FID 0x6B, SOH 0x7C, destination,
+    // payload duration, gate delay, and XOR check. Outputs update only after
+    // the complete header passes every format and integrity check.
+    wire fid_pulse;
+    wire header_valid;
+    wire header_discard;
+    wire [7:0] qwn_destination;
+    wire [15:0] qwn_payload_duration;
+    wire [23:0] qwn_gate_delay;
+    wire [2:0] qwn_ui_offset;
+    rx_header qwn_header_parser_i (
+        .clk(rxusrclk2), .rst(datapath_reset),
+        .byte_valid(decoded_valid), .code_err(decoded_error),
+        .k_i(decoded_k), .byte_i(decoded_byte),
+        .byte_bit_pos(decoded_bit_pos),
+        .fid_pulse(fid_pulse), .hdr_valid(header_valid),
+        .hdr_discard(header_discard), .destination(qwn_destination),
+        .payload_dur(qwn_payload_duration), .gate_delay(qwn_gate_delay),
+        .ui_offset(qwn_ui_offset)
+    );
+
+    // Original QWN coarse payload-start gate. It counts every recovered
+    // 156.25-MHz cycle from FID, including the laser-off interval, but fires
+    // only if that FID's complete header validates. CDR hold is deliberately
+    // still disabled at the GT for this baseline checkpoint.
+    wire qwn_gate;
+    wire [7:0] qwn_gate_fine;
+    wire [2:0] qwn_gate_inst;
+    wire qwn_gate_veto;
+    wire [2:0] qwn_gate_ui;
+    wire qwn_gate_armed;
+    // CAL_OFFSET=0 here because this checkpoint observes the internal coarse
+    // pulse directly. The original -1 default compensates the later physical
+    // OSERDES/ODELAY marker path, which is not instantiated yet.
+    rx_gate #(.CAL_OFFSET(16'sd0)) qwn_gate_i (
+        .clk(rxusrclk2), .rst(datapath_reset), .bv(decoded_valid),
+        .eph_inst_i(recovered_phase[2:0]),
+        .eph_filt_i({recovered_phase[2:0], 4'b0000}),
+        .fid_pulse(fid_pulse), .hdr_valid_i(header_valid),
+        .hdr_discard_i(header_discard), .gate_delay_i(qwn_gate_delay),
+        .ui_offset_i(qwn_ui_offset), .gate_o(qwn_gate),
+        .gate_fine_o(qwn_gate_fine), .gate_inst_o(qwn_gate_inst),
+        .veto_o(qwn_gate_veto), .gate_ui_o(qwn_gate_ui),
+        .armed_o(qwn_gate_armed)
+    );
+
+    // Physical burst proof. LED5 latches an actual SFP LOS event, LED6
+    // latches a later valid header, and LED7 expires unless valid headers
+    // continue arriving. 2^16 cycles is ~0.42 ms at 156.25 MHz, fewer than
+    // three ~0.152-ms burst periods.
+    wire burst_los_seen;
+    wire header_after_los;
+    wire header_recent;
+    wire gate_recent;
+    qwn_burst_diagnostics burst_diagnostics_i (
+        .clk(rxusrclk2), .rst(datapath_reset),
+        .sfp_los_async(sfp1_los), .header_valid(header_valid),
+        .gate_pulse(qwn_gate),
+        .los_seen(burst_los_seen),
+        .header_after_los(header_after_los),
+        .header_recent(header_recent), .gate_recent(gate_recent)
     );
 
     reg [25:0] rx_heartbeat = 26'd0;
@@ -152,18 +217,24 @@ module qwn_raw_rx_top (
         else rx_heartbeat <= rx_heartbeat + 1'b1;
 
     // DS2..DS9 are active-high. The physical-link indicators are unchanged;
-    // LEDs 6/7 now prove symbol alignment and actual 8b/10b decoding.
+    // LEDs 5-7 prove physical dark, recovery after dark, and continued
+    // original-format QWN header validation respectively.
     assign gpio_led[0] = stable_locked;
     assign gpio_led[1] = qpll_lock;
     assign gpio_led[2] = rx_fsm_done & rx_reset_done;
     assign gpio_led[3] = rx_heartbeat[25];
     assign gpio_led[4] = ~sfp1_mod_abs;
-    assign gpio_led[5] = ~sfp1_los;
-    assign gpio_led[6] = comma_locked;
-    assign gpio_led[7] = k285_healthy;
+    assign gpio_led[5] = burst_los_seen;
+    assign gpio_led[6] = header_after_los & gate_recent;
+    assign gpio_led[7] = header_recent;
 
     wire _unused = &{1'b0, sfp1_tx_fault, recovered_phase,
-                     decoded_byte, decoded_k, decoded_valid, decoded_error};
+                     decoded_byte, decoded_k, decoded_valid, decoded_error,
+                     fid_pulse, header_discard, qwn_destination,
+                     qwn_payload_duration, qwn_gate_delay, qwn_ui_offset,
+                     comma_locked, k285_healthy, qwn_gate_fine,
+                     qwn_gate_inst, qwn_gate_veto, qwn_gate_ui,
+                     qwn_gate_armed};
 endmodule
 
 `default_nettype wire

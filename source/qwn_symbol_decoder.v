@@ -17,7 +17,8 @@ module qwn_symbol_decoder #(
     output reg        byte_valid,
     output reg        code_err,
     output reg        comma_locked,
-    output reg        k285_healthy
+    output reg        k285_healthy,
+    output reg [2:0]  byte_bit_pos
 );
     localparam [9:0] K285_NEG_REVERSED = 10'b0101111100;
     localparam [9:0] K285_POS_REVERSED = 10'b1010000011;
@@ -45,14 +46,17 @@ module qwn_symbol_decoder #(
     reg       reversed_k_match;
     reg       symbol_hit;
     reg [9:0] normalized_symbol;
+    reg [2:0] normalized_symbol_pos;
     integer i;
 
     // Feed-forward pipeline around the decoder ROM. There can be at most one
     // completed 10-bit symbol in a cycle containing <=8 recovered bits.
     reg [9:0] symbol_q;
     reg       symbol_valid_q;
+    reg [2:0] symbol_pos_q;
     reg [9:0] decoder_input;
     reg       decoder_valid;
+    reg [2:0] decoder_pos;
     wire [7:0] decoded_byte;
     wire decoded_k;
     wire decoded_error;
@@ -78,12 +82,14 @@ module qwn_symbol_decoder #(
             k_o <= 1'b0;
             byte_valid <= 1'b0;
             code_err <= 1'b0;
+            byte_bit_pos <= 3'd0;
         end else begin
             v_sr = shift_reg;
             v_countdown = countdown;
             v_locked = comma_locked;
             symbol_hit = 1'b0;
             normalized_symbol = 10'd0;
+            normalized_symbol_pos = 3'd0;
 
             // Consume the recovered bits in chronological order. A complete
             // reversed K28.5 can only occur at its legal symbol boundary in
@@ -99,11 +105,13 @@ module qwn_symbol_decoder #(
                         v_locked = 1'b1;
                         v_countdown = 4'd10;
                         normalized_symbol = reverse10(v_next_sr);
+                        normalized_symbol_pos = i[2:0];
                         symbol_hit = 1'b1;
                     end else if (v_locked) begin
                         if (v_countdown == 4'd1) begin
                             v_countdown = 4'd10;
                             normalized_symbol = reverse10(v_next_sr);
+                            normalized_symbol_pos = i[2:0];
                             symbol_hit = 1'b1;
                         end else begin
                             v_countdown = v_countdown - 1'b1;
@@ -118,12 +126,16 @@ module qwn_symbol_decoder #(
             comma_locked <= v_locked;
 
             symbol_valid_q <= symbol_hit;
-            if (symbol_hit)
+            if (symbol_hit) begin
                 symbol_q <= normalized_symbol;
+                symbol_pos_q <= normalized_symbol_pos;
+            end
 
             decoder_valid <= symbol_valid_q;
-            if (symbol_valid_q)
+            if (symbol_valid_q) begin
                 decoder_input <= symbol_q;
+                decoder_pos <= symbol_pos_q;
+            end
 
             byte_valid <= 1'b0;
             code_err <= 1'b0;
@@ -132,6 +144,7 @@ module qwn_symbol_decoder #(
                 k_o <= decoded_k;
                 byte_valid <= 1'b1;
                 code_err <= decoded_error;
+                byte_bit_pos <= decoder_pos;
 
                 if (decoded_error) begin
                     good_k_streak <= 4'd0;
